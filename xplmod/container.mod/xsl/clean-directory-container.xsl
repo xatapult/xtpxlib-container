@@ -3,7 +3,7 @@
   xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xtlc="http://www.xtpxlib.nl/ns/common" xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"
   xmlns:local="#local" exclude-result-prefixes="#all">
   <!-- ================================================================== -->
-  <!--*	
+  <!--~	
     Cleans some paths and other stuff in a container generated from a directory
     Explicitly keep all namespace information (no copy-namespaces="no") to allow copying MS office stuff!!!
 	-->

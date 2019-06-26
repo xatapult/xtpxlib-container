@@ -2,7 +2,7 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xtlc="http://www.xtpxlib.nl/ns/common" xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local" exclude-result-prefixes="#all">
   <!-- ================================================================== -->
-  <!--*	
+  <!--~	
     Cleans some paths and other stuff in the zip container.
     Explicitly keep all namespace information (no copy-namespaces="no") to allow copying office stuff.
 	-->
