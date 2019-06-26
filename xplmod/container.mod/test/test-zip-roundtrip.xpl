@@ -9,24 +9,24 @@
   <!-- ================================================================== -->
   <!-- SETUP: -->
   
-  <p:option name="tmp-base-dir" required="true"/>
+  <p:option name="tmp-base-dir" required="false" select="resolve-uri('../../../tmp', static-base-uri())"/>
   
   <p:output port="result" primary="true" sequence="false"/>
   <p:serialization port="result" method="xml" encoding="UTF-8" indent="true" omit-xml-declaration="false"/>
   
   <p:import href="../container.mod.xpl"/>
   
-  <p:variable name="dref-source-zip" select="resolve-uri('test.xlsx', static-base-uri())"/>
+  <p:variable name="href-source-zip" select="resolve-uri('test.xlsx', static-base-uri())"/>
   <p:variable name="target" select="concat($tmp-base-dir, '/test-created.xlsx')"/>
   
   <!-- ================================================================== -->
   
   <xtlcon:zip-to-container>
-    <p:with-option name="dref-source-zip" select="$dref-source-zip"/>
+    <p:with-option name="href-source-zip" select="$href-source-zip"/>
   </xtlcon:zip-to-container>
   
   <xtlcon:container-to-zip>
-    <p:with-option name="dref-target-zip" select="$target"/> 
+    <p:with-option name="href-target-zip" select="$target"/> 
   </xtlcon:container-to-zip>
   
 </p:declare-step>

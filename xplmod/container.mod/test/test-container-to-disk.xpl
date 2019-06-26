@@ -13,7 +13,7 @@
     <p:document href="test-container.xml"/>
   </p:input>
 
-  <p:option name="tmp-base-dir" required="true"/>
+  <p:option name="tmp-base-dir" required="false" select="resolve-uri('../../../tmp/CONTAINERTODISK', static-base-uri())"/>
 
   <p:output port="result" primary="true" sequence="false"/>
   <p:serialization port="result" method="xml" encoding="UTF-8" indent="true" omit-xml-declaration="false"/>
@@ -23,7 +23,7 @@
   <!-- ================================================================== -->
 
   <xtlcon:container-to-disk>
-    <p:with-option name="dref-target" select="$tmp-base-dir"/>
+    <p:with-option name="href-target" select="$tmp-base-dir"/>
     <p:with-option name="remove-target" select="false()"/>
   </xtlcon:container-to-disk>
 

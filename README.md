@@ -1,6 +1,6 @@
 # `xtpxlib-container`: Xatapult XML Library - Container handling
 
-Version and release information: See `/version.xml` 
+Version, release and dependency information: See `/version.xml` 
 
 Xatapult Content Engineering - http://www.xatapult.nl
 
@@ -21,6 +21,7 @@ Files that are not XML are not copied into the container but passed as a *refere
 
 * Clone the GitHub repository to some appropriate location on disk. That's basicly it for installation.
 * If you use more than one `xtpxlib` component, all repositories must be cloned in the same base directory.
+* Most libraries depend on `xtpxlib-common`
 
 ----
 

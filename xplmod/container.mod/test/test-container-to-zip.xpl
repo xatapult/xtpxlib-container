@@ -13,7 +13,7 @@
     <p:document href="test-container.xml"/>
   </p:input>
 
-  <p:option name="tmp-base-dir" required="true"/>
+  <p:option name="tmp-base-dir" required="false" select="resolve-uri('../../../tmp', static-base-uri())"/>
 
   <p:output port="result" primary="true" sequence="false"/>
   <p:serialization port="result" method="xml" encoding="UTF-8" indent="true" omit-xml-declaration="false"/>
@@ -23,7 +23,7 @@
   <!-- ================================================================== -->
 
   <xtlcon:container-to-zip>
-    <p:with-option name="dref-target-zip" select="concat($tmp-base-dir, '/C2Z.zip')"/>
+    <p:with-option name="href-target-zip" select="concat($tmp-base-dir, '/C2Z.zip')"/>
   </xtlcon:container-to-zip>
 
 </p:declare-step>

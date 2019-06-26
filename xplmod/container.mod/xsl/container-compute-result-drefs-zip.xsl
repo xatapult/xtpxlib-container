@@ -11,14 +11,13 @@
 
   <xsl:output method="xml" indent="no" encoding="UTF-8"/>
 
-  <xsl:include href="../../../../common/xslmod/common.mod.xsl"/>
-  <xsl:include href="../../../../common/xslmod/dref.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/general.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/href.mod.xsl"/>
 
-  <xsl:param name="dref-target-zip" as="xs:string" required="yes"/>
-
+  <xsl:param name="href-target-zip" as="xs:string" required="yes"/>
 
   <xsl:variable name="result-zip" as="xs:string"
-    select="local:dref-normalize(if (normalize-space($dref-target-zip) ne '') then $dref-target-zip else string(/*/@dref-target-zip))"/>
+    select="local:href-normalize(if (normalize-space($href-target-zip) ne '') then $href-target-zip else string(/*/@href-target-zip))"/>
 
   <!-- ================================================================== -->
 
@@ -40,8 +39,8 @@
           <xsl:with-param name="msg-parts" select="'container-to-zip: No target zipfile specified'"/>
         </xsl:call-template>
       </xsl:if>
-      <xsl:attribute name="dref-target-zip-result" select="$result-zip"/>
-      <xsl:attribute name="dref-target-zip-tmpdir" select="concat($result-zip, '-TMPDIR')"/>
+      <xsl:attribute name="href-target-zip-result" select="$result-zip"/>
+      <xsl:attribute name="href-target-zip-tmpdir" select="concat($result-zip, '-TMPDIR')"/>
 
       <xsl:apply-templates/>
     </xsl:copy>
@@ -50,10 +49,10 @@
   <!-- ================================================================== -->
   <!-- SUPPORT: -->
 
-  <xsl:function name="local:dref-normalize" as="xs:string">
+  <xsl:function name="local:href-normalize" as="xs:string">
     <xsl:param name="dref" as="xs:string"/>
 
-    <xsl:sequence select="xtlc:protocol-add(xtlc:dref-canonical($dref), $xtlc:protocol-file, true())"/>
+    <xsl:sequence select="xtlc:href-protocol-add(xtlc:href-canonical($dref), $xtlc:protocol-file, true())"/>
   </xsl:function>
 
 </xsl:stylesheet>

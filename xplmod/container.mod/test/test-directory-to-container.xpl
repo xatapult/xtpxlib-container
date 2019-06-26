@@ -12,14 +12,14 @@
   <p:output port="result" primary="true" sequence="false"/>
   <p:serialization port="result" method="xml" encoding="UTF-8" indent="true" omit-xml-declaration="false"/>
   
-  <p:option name="dref-source-directory" required="true"/>    
+  <p:option name="href-source-directory" required="false" select="resolve-uri('..', static-base-uri())"/>    
   
   <p:import href="../container.mod.xpl"/>
   
   <!-- ================================================================== -->
   
   <xtlcon:directory-to-container>
-    <p:with-option name="dref-source-directory" select="$dref-source-directory"/>
+    <p:with-option name="href-source-directory" select="$href-source-directory"/>
   </xtlcon:directory-to-container>
   
 </p:declare-step>

@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document-container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.xtpxlib.nl/ns/contianer ../../../xsd/container.xsd" xmlns="http://www.xtpxlib.nl/ns/container"
-  timestamp="2014-08-21T12:00:00" dref-target-path="container-to-disk-target" dref-source-zip="zip.zip" dref-target-zip="ZIPPEDIEZIP.zip">
+  timestamp="2014-08-21T12:00:00" href-target-path="container-to-disk-target" href-source-zip="zip.zip" href-target-zip="ZIPPEDIEZIP.zip">
 
-  <document dref-target="data/a.xml">
+  <document href-target="data/a.xml">
     <Dummy/>
   </document>
 
+  <!-- Text: -->
+  <document href-target="data/a.txt" mime-type="text/plain"> 
+    <Dummy>Just some random piece of text!</Dummy>
+  </document>
+  
   <!-- From zip mentioned on root: -->
-  <external-document dref-source="x/test-in-zip.png" dref-target="assets/test-from-zip-1.png"/>
-  <external-document dref-source="x/test-in-zip.png" dref-target="assets/test-from-zip-2.png"/>
+  <external-document href-source="x/test-in-zip.png" href-target="assets/test-from-zip-1.png"/>
 
   <!-- From specific zip: -->
-  <external-document dref-source-zip="zip2.zip" dref-source="test-in-zip-2.png" dref-target="assets///test-from-specific-zip.png"/>
+  <external-document href-source-zip="zip2.zip" href-source="test-in-zip-2.png" href-target="assets///test-from-specific-zip.png"/>
 
   <!-- Not from zip: -->
-  <external-document dref-source="test.png" not-in-global-source-zip="true" dref-target="assets/test.png"/>
+  <external-document href-source="test.png" not-in-global-source-zip="true" href-target="assets/test-not-from-zip.png"/>
 
   <!-- Unwritten external: -->
-  <external-document dref-source-zip="zip2.zip" dref-source="test-in-zip-2.png"/>
+  <external-document href-source-zip="zip2.zip" href-source="test-in-zip-2.png"/>
 
   <!-- XSL-FO document: -->
-  <document dref-target="pdf/test-pdf.pdf" mime-type="application/pdf">
+  <document href-target="pdf/test-pdf.pdf" mime-type="application/pdf">
     <root xmlns="http://www.w3.org/1999/XSL/Format">
       <layout-master-set>
         <simple-page-master master-name="spm-main" page-height="29.7cm" page-width="21cm" margin-top="2cm" margin-bottom="2cm" margin-left="2.5cm"

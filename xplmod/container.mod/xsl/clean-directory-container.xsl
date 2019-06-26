@@ -12,10 +12,10 @@
 
   <xsl:output method="xml" indent="no" encoding="UTF-8"/>
 
-  <xsl:include href="../../../../common/xslmod/common.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/general.mod.xsl"/>
 
   <xsl:param name="add-document-target-paths" as="xs:string" required="yes"/>
-  <xsl:param name="dref-target-path" as="xs:string" required="yes"/>
+  <xsl:param name="href-target-path" as="xs:string" required="yes"/>
 
   <xsl:variable name="do-add-document-target-paths" as="xs:boolean" select="xtlc:str2bln($add-document-target-paths, true())"/>
 
@@ -33,8 +33,8 @@
     <xsl:copy>
       <xsl:copy-of select="@*"/>
 
-      <xsl:if test="normalize-space($dref-target-path) ne ''">
-        <xsl:attribute name="dref-target-path" select="$dref-target-path"/>
+      <xsl:if test="normalize-space($href-target-path) ne ''">
+        <xsl:attribute name="href-target-path" select="$href-target-path"/>
       </xsl:if>
 
       <xsl:apply-templates/>
@@ -43,14 +43,14 @@
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-  <xsl:template match="xtlcon:*[exists(@dref-source)]">
+  <xsl:template match="xtlcon:*[exists(@href-source)]">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
 
-      <xsl:variable name="dref-source" as="xs:string" select="@dref-source"/>
+      <xsl:variable name="href-source" as="xs:string" select="@href-source"/>
 
       <xsl:if test="$do-add-document-target-paths">
-        <xsl:attribute name="dref-target" select="$dref-source"/>
+        <xsl:attribute name="href-target" select="$href-source"/>
       </xsl:if>
 
       <xsl:apply-templates/>
