@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  name="xtlcon:document">
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <attribute name="href-source">
+    <description>
+      <para>href of the source for this document.</para>
+      <para>When this document comes from a zip file, it holds the href of the file <emphasis>in</emphasis> the zip.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-source-result">
+    <description>
+      <para>After processing holds the full canonical name of the source file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target">
+    <description>
+      <para>href of the target for this document.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target-result">
+    <description>
+      <para>After processing holds the full canonical name of the target file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="mime-type">
+    <description>
+      <para>Some specific values for this attribute trigger special conversions on output. See <xref linkend="sect-container-document-mime-type-values"/>.</para>
+    </description>
+    <type name="xs:string"></type>
+  </attribute>
+
+  <attribute name="(any)">
+    <description>
+      <para>Any other attributes are allowed, so additional information can be added for use during processing.</para>
+    </description>
+  </attribute>
+
+  <!-- ================================================================== -->
+
+  <element name="(any)" occurs="1">
+    <description>
+      <para>Root element + contents of the document.</para>
+    </description>
+  </element>
+
+</element-description>

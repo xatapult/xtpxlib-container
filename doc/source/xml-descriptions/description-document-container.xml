@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
-  name="xtlcon:document-container" id="xdoc-dump-parameters">
+  name="xtlcon:document-container">
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
@@ -30,7 +30,7 @@
 
   <attribute name="href-target-zip-result">
     <description>
-      <para>After the container is written to a zip file using <code><link linkend="2container.mod.xpl-xtlcon_container-to-zip"
+      <para>After the container is written to a zip file using <code><link linkend="container.mod.xpl-xtlcon_container-to-zip"
             >xtlcon:container-to-zip</link></code>, this attribute will hold the full canonical filename of the zip file.</para>
     </description>
     <type name="xs:string"/>
@@ -81,13 +81,13 @@
 
     <element name="xtlcon:document">
       <description>
-        <para>A document inside the container structure.</para>
+        <para>A document inside the container structure. See <xref linkend="sect-internal-documents"/>.</para>
       </description>
     </element>
 
     <element name="xtlcon:external-document">
       <description>
-        <para>An external document, referenced from the container structure.</para>
+        <para>An external document, referenced from the container structure. See <xref linkend="sect-external-documents"/>.</para>
       </description>
     </element>
 

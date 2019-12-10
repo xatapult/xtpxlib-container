@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  name="xtlcon:external-document">
+
+  <attribute-table-header>
+    <para>All attributes of an <link linkend="sect-internal-documents">internal document</link> plus the following:</para>
+  </attribute-table-header>
+
+  <attribute name="(attributes-from-internal-document)">
+    <description>
+      <para>See <link linkend="sect-internal-documents">internal documents</link>.</para>
+    </description>
+  </attribute>
+  
+  <attribute name="href-source-zip">
+    <description>
+      <para>Reference to the source zip file for this document. If present overrides <code>/*/@href-source-zip</code></para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-source-zip-result">
+    <description>
+      <para>After processing holds the full canonical name of the source zip file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="not-in-global-source-zip" default="false">
+    <description>
+      <para>When set to <code>true</code>, the global zip file <code>/*/@href-source-zip</code> is not used. This is necessary to allow references to
+        external files that, when a global zip file is used, come from elsewhere.</para>
+    </description>
+    <type name="xs:boolean"/>
+  </attribute>
+
+  <!-- ================================================================== -->
+
+  <element name="(any)">
+    <description>
+      <para>Any other elements are allowed, so additional information can be added for use during processing.</para>
+    </description>
+  </element>
+
+</element-description>

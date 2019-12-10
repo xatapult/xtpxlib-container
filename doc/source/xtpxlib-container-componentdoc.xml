@@ -31,14 +31,88 @@
 
   <chapter xml:id="chapter-description">
     <title>Description</title>
-
-  <para>TBD</para>
     
-  <xdoc:transform href="$xdoc/xml-description.xpl">
-    <xi:include href="xml-descriptions/description-document-container.xml"/>
-  </xdoc:transform>
+    <para>An XML container as handled/used by this module is an XML structure that holds other XML documents and references to binary files. Here is a short example:</para>
     
+    <programlisting>TBD</programlisting>
+    
+    <para>Why is this useful? Here are some use-cases:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Office docs</para>
+      </listitem>
+      <listitem>
+        <para>Creating a website dir structure</para>
+      </listitem>
+    </itemizedlist>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
+    <sect1>
+      <title>Working with containers</title>
+      
+      <para>TBD take care of all details</para>
+    </sect1>
+    
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    
+    <sect1>
+      <title>The container format</title>
+
+      <para role="keep-with-next">The root of an XML container document is an <tag>xtlcon:document-container</tag> element. The prefix <code>xtlcon:</code> must be
+        bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
+        (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
+
+      <xdoc:transform href="$xdoc/xml-description.xpl">
+        <xi:include href="xml-descriptions/description-document-container.xml"/>
+      </xdoc:transform>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-internal-documents">
+        <title>Internal documents</title>
+
+        <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is inside the container document. This will
+          in most cases be XML documents, but text is also possible. It must be surrounded by an <tag>xtlcon:document</tag> element:</para>
+
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/description-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-external-documents">
+        <title>External documents</title>
+
+        <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
+          files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/description-external-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-container-document-mime-type-values">
+        <title>Document MIME type values</title>
+
+        <para>TBD</para>
+        <itemizedlist>
+          <listitem>
+            <para>application/pdf AND fo:root</para>
+          </listitem>
+          <listitem>
+            <para>text/plain</para>
+          </listitem>
+        </itemizedlist>
+      </sect2>
+
+    </sect1>
   </chapter>
 
   <!-- ================================================================== -->
