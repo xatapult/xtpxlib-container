@@ -3,7 +3,7 @@
   targetNamespace="http://www.xtpxlib.nl/ns/container" vc:minVersion="1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
   xmlns:xtlcon="http://www.xtpxlib.nl/ns/container">
   <xs:annotation>
-    <xs:documentation>Common constructs used by xtpxlib.</xs:documentation>
+    <xs:documentation>Schema for an XML container.</xs:documentation>
   </xs:annotation>
   <xs:element name="document-container">
     <xs:annotation>

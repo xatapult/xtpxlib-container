@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../xtpxlib-xdoc/xsd/docbook/docbook.nvdl" type="application/xml" schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xdoc="http://www.xtpxlib.nl/ns/xdoc" version="5.0">
+  <!-- ================================================================== -->
+  <!--
+    Source for this component's documentation.
+  -->
+  <!-- ================================================================== -->
+
+  <info>
+    <title>{$component-name}</title>
+    <subtitle>XML Container Handling</subtitle>
+    <pubdate>{$DATE}</pubdate>
+    <author>
+      <personname>{$author-name}</personname>
+    </author>
+    <orgname>{$owner-company-name}</orgname>
+  </info>
+
+  <!-- ================================================================== -->
+
+  <preface>
+    <title>{$library-name} - XML Container Handling</title>
+
+    <xdoc:transform href="../../../xtpxlib-webdoc/transforms/generate-basic-component-information-header.xpl" component-name="{$component-name}"/>
+
+  </preface>
+
+  <!-- ================================================================== -->
+
+  <chapter xml:id="chapter-description">
+    <title>Description</title>
+
+  <para>TBD</para>
+    
+  <xdoc:transform href="$xdoc/xml-description.xpl">
+    <xi:include href="xml-descriptions/description-document-container.xml"/>
+  </xdoc:transform>
+    
+
+  </chapter>
+
+  <!-- ================================================================== -->
+
+  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc Libraries">
+    <title>XProc Libraries</title>
+
+    <para>The {$component-name} component contains the following XProc (1.0) library module:</para>
+
+    <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xplmod/" filter="\.mod\.xpl$" header-level="1" filecomponents="3"
+      sublevels="true"/>
+
+  </chapter>
+
+  <!-- ================================================================== -->
+
+  <chapter xml:id="chapter-xml-schemas" xreflabel="XML Schemas">
+    <title>XML Schemas</title>
+
+    <para>The {$component-name} component contains the following XML Schemas:</para>
+
+    <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xsd/" filter="\.xsd$" header-level="1" filecomponents="2"
+      sublevels="true"/>
+
+  </chapter>
+
+</book>
