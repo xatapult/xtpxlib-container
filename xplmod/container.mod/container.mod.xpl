@@ -40,7 +40,7 @@
       </p:documentation>
     </p:option>
     
-    <p:option name="href-fop-config" required="false" select="''">
+    <p:option name="href-fop-config" required="false" select="resolve-uri('../../../xtpxlib-common/data/fop-default-config.xml', static-base-uri())">
       <p:documentation>
         Optional reference to an Apache FOP configuration file. Must be absolute!
         When not present a default file will be used. 
@@ -55,12 +55,6 @@
     
     <p:import href="http://xmlcalabash.com/extension/steps/library-1.0.xpl"/>
     <p:import href="../../../xtpxlib-common/xplmod/common.mod/common.mod.xpl"/>
-    
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-    <!-- PREPARATIONS: -->
-    
-    <p:variable name="href-default-fop-config" select="resolve-uri('../../../xtpxlib-common/data/fop-default-config.xml', static-base-uri())"/>
-    <p:variable name="href-fop-config-to-use" select="if ($href-fop-config ne '') then $href-fop-config else $href-default-fop-config"/>
     
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     
@@ -107,7 +101,7 @@
         <p:when test="($mime-type eq 'application/pdf') and exists(/*/self::fo:root)">
           <p:xsl-formatter name="step-create-pdf" content-type="application/pdf">
             <p:with-option name="href" select="$href-target-result"/>
-            <p:with-param name="UserConfig" select="$href-fop-config-to-use"/>
+            <p:with-param name="UserConfig" select="$href-fop-config"/>
           </p:xsl-formatter>
         </p:when>
         
@@ -202,7 +196,7 @@
     </p:output>
     
     <p:import href="http://xmlcalabash.com/extension/steps/library-1.0.xpl"/>
-    <p:import href="../../../common/xplmod/common.mod/common.mod.xpl"/>
+    <p:import href="../../../xtpxlib-common/xplmod/common.mod/common.mod.xpl"/>
     
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     
@@ -284,7 +278,7 @@
       </p:documentation>
     </p:output>
     
-    <p:import href="../../../common/xplmod/common.mod/common.mod.xpl"/>
+    <p:import href="../../../xtpxlib-common/xplmod/common.mod/common.mod.xpl"/>
     
     <p:variable name="debug" select="false()"/>
     

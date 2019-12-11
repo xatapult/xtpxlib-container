@@ -14,13 +14,13 @@
   
   <p:import href="../container.mod.xpl"/>
 
-  <p:variable name="dref-source-zip" select="resolve-uri('test.xlsx', static-base-uri())"/>
+  <p:variable name="href-source-zip" select="resolve-uri('test.xlsx', static-base-uri())"/>
   
   <!-- ================================================================== -->
   
   <xtlcon:zip-to-container>
-    <p:with-option name="dref-source-zip" select="$dref-source-zip"/>
-    <p:with-option name="dref-target-path" select="'zip-to-container-target'"/>
+    <p:with-option name="href-source-zip" select="$href-source-zip"/>
+    <p:with-option name="href-target-path" select="'zip-to-container-target'"/>
   </xtlcon:zip-to-container>
   
 </p:declare-step>
