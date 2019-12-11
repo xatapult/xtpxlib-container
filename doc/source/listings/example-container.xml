@@ -1,0 +1,14 @@
+<document-container xmlns="http://www.xtpxlib.nl/ns/container" 
+  timestamp="2019-12-12T12:11:10"
+  href-target-path="/my/website/location">
+
+  <document href-target="index.html">
+    <html> … </html>
+  </document>
+
+  <document href-target="page1.html">
+    <html> … </html>
+  </document>
+
+  <external-document href-source="/my/resources/image.jpg" href-target="resources/image.jpg"/>
+</document-container>

@@ -30,3 +30,7 @@ p.bridgehead {
 span.italic {
   font-style: italic;
 }
+
+dd {
+  margin-left: 1em;
+}
