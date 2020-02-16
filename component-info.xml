@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component-info xmlns="http://www.xtpxlib.nl/ns/webdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xml="http://www.w3.org/XML/1998/namespace" xsi:schemaLocation="http://www.xtpxlib.nl/ns/webdoc xsd/component-info.xsd" name="xtpxlib-container">
+<component-info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.xtpxlib.nl/ns/webdoc ../xtpxlib-webdoc/xsd/component-info.xsd" xmlns="http://www.xtpxlib.nl/ns/webdoc"
+ name="xtpxlib-container">
   <!-- ================================================================== -->
   <!--
     Component information for this xtpxlib component.
@@ -10,6 +11,9 @@
   <!-- ================================================================== -->
 
   <releases>
+    <release version="1.0.A" date="2020-02-16">
+      New logo and minor fixes
+    </release>
     <release version="1.0" date="2019-12-18">
       Initial release
     </release>
