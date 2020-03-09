@@ -70,8 +70,10 @@
         </p:identity>
       </p:catch>
     </p:try>
+    
     <!-- Add the relative reference to the document: -->
     <p:add-attribute attribute-name="href-source" attribute-value="{$href-source-rel}"/>
+    
   </p:for-each>
 
   <!-- Create the container root element and dress it up with the necessary attributes: -->
@@ -82,9 +84,9 @@
     <p:add-attribute attribute-name="href-target-path" attribute-value="{$href-target-path}"/>
   </p:if>
 
-  <!-- Check if we need to record a target-path for the individual files: -->
+  <!-- Check if we need to fill @target-path for the individual files: -->
   <p:if test="$add-document-target-paths">
-    <p:viewport match="/*/xtlcon:*[exists(@href-source)]">
+    <p:viewport match="/xtlcon:document-container/xtlcon:*[exists(@href-source)]">
       <p:add-attribute attribute-name="href-target" attribute-value="{/*/@href-source}"/>
     </p:viewport>
   </p:if>
