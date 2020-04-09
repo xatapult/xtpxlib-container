@@ -16,7 +16,7 @@ The `xtpxlib-container` component has XProc (1.0) pipelines for:
 
 ## Technical information
 
-Component version: V1.0.A - 2020-02-16
+Component version: V1.0.B - 2020-04-09
 
 Documentation: [`https://container.xtpxlib.org`](https://container.xtpxlib.org)
 
@@ -29,7 +29,11 @@ This component depends on:
 
 ## Version history
 
-**V1.0.A - 2020-02-16 (current)**
+**V1.0.B - 2020-04-09 (current)**
+
+Bugfix for copying binary files referenced from a container.
+
+**V1.0.A - 2020-02-16**
 
 New logo and minor fixes
 

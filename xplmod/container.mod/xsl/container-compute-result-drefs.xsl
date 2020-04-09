@@ -18,6 +18,8 @@
 
   <xsl:variable name="base-result-path" as="xs:string"
     select="local:href-normalize(if (normalize-space($href-target) ne '') then $href-target else string(/*/@href-target-path))"/>
+  
+  <xsl:variable name="base-source-path" as="xs:string" select="local:href-normalize((/*/@href-source-path, base-uri(/*))[1])"/>  
 
   <xsl:variable name="main-source-zip" as="xs:string?" select="/*/@href-source-zip"/>
   <xsl:variable name="href-global-zip" as="xs:string"
@@ -103,7 +105,7 @@
 
           <!-- Normal reference, make absolute: -->
           <xsl:when test="(normalize-space(@href-source) ne '') and not($in-zip)">
-            <xsl:attribute name="href-source-result" select="local:href-normalize(resolve-uri(@href-source, base-uri(/*)))"/>
+            <xsl:attribute name="href-source-result" select="local:href-normalize(xtlc:href-concat(($base-source-path, @href-source)))"/>
           </xsl:when>
 
           <!-- Reference in zip, make sure it is formatted right No protocol, no leading /): -->
