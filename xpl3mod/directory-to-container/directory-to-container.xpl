@@ -16,6 +16,7 @@
   <!-- SETUP: -->
 
   <p:import href="../../../xtpxlib-common/xpl3mod/recursive-directory-list/recursive-directory-list.xpl"/>
+  <p:import href="../local/load-for-container.xpl"/>
 
   <!-- TBD remove default and make required -->
   <p:option name="href-source-directory" as="xs:string" required="false"
@@ -28,7 +29,7 @@
   </p:option>
 
   <p:option name="exclude-filter" as="xs:string*" required="false" select="'\.git/'">
-    <p:documentation>Optional regular expression exclude filters. By default, git directories are excluded.</p:documentation>
+    <p:documentation>Optional regular expression exclude filters. By default, `.git` directories are excluded.</p:documentation>
   </p:option>
 
   <p:option name="depth" as="xs:integer" required="false" select="-1">
@@ -39,7 +40,7 @@
     <p:documentation>Whether to load HTML files.</p:documentation>
   </p:option>
 
-  <p:option name="load-text" as="xs:boolean" required="false" select="true()">
+  <p:option name="load-text" as="xs:boolean" required="false" select="false()">
     <p:documentation>Whether to load text files.</p:documentation>
   </p:option>
 
@@ -61,8 +62,12 @@
     <p:documentation>Optional target path to record on the container.</p:documentation>
   </p:option>
 
+  <p:option name="override-content-types" as="array(array(xs:string))?" required="false" select="()">
+    <p:documentation>Override content types specification (see description of `p:directory-list`).</p:documentation>
+  </p:option>
+
   <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}">
-    <p:documentation>TBD</p:documentation>
+    <p:documentation>The resulting container structure</p:documentation>
   </p:output>
 
   <!-- ================================================================== -->
@@ -71,83 +76,24 @@
     <!-- Since include/exclude filters can be sequences of strings, we'll have to pass them by p:with-option (and not as attribute): -->
     <p:with-option name="exclude-filter" select="$exclude-filter"/>
     <p:with-option name="include-filter" select="$include-filter"/>
+    <p:with-option name="override-content-types" select="$override-content-types"/>
   </xtlc:recursive-directory-list>
 
   <p:variable name="base-dir" select="/*/@xml:base"/>
   <p:for-each>
     <p:with-input select="/*/c:file"/>
 
-    <p:variable name="href-source-abs" as="xs:string" select="/*/@href-abs"/>
-    <p:variable name="href-source-rel" as="xs:string" select="/*/@href-rel"/>
-    <p:variable name="content-type" as="xs:string" select="/*/@content-type"/>
+    <xtlcon:load-for-container>
+      <p:with-option name="href-source-abs" select="/*/@href-abs"/>
+      <p:with-option name="href-source-rel" select="/*/@href-rel"/>
+      <p:with-option name="content-type" select="/*/@content-type"/>
+      <p:with-option name="load-html" select="$load-html"/>
+      <p:with-option name="load-text" select="$load-text"/>
+      <p:with-option name="load-json" select="$load-json"/>
+      <p:with-option name="json-as-xml" select="$json-as-xml"/>
+      <p:with-option name="add-document-target-paths" select="$add-document-target-paths"/>
+    </xtlcon:load-for-container>
 
-    <!-- Find out what to do: -->
-    <p:variable name="is-xml" as="xs:boolean"
-      select="($content-type ne 'application/xhtml+xml') and (($content-type = ('application/xml', 'text/xml')) or ends-with($content-type, '+xml'))"/>
-    <p:variable name="is-html" as="xs:boolean" select="$content-type = ('text/html', 'application/xhtml+xml')"/>
-    <p:variable name="is-text" select="not($is-xml) and not($is-html) and starts-with($content-type, 'text/')"/>
-    <p:variable name="is-json" as="xs:boolean" select="$content-type eq 'application/json'"/>
-    <p:variable name="do-try-load" as="xs:boolean"
-      select="$is-xml or ($load-html and $is-html) or ($load-text and $is-text) or ($load-json and $is-json)"/>
-
-    <p:choose>
-      
-      <!--Try to load it and treat is as the content-type we expect:: -->
-      <p:when test="$do-try-load">
-        <p:try>
-          <p:load href="{$href-source-abs}" content-type="{$content-type}"/>
-          <p:choose>
-            <!-- Text -->
-            <p:when test="$is-text">
-              <p:identity>
-                <p:with-input>
-                  <xtlcon:document xml:space="preserve">{.}</xtlcon:document>
-                </p:with-input>
-              </p:identity>
-            </p:when>
-            <!-- JSON as XML: -->
-            <p:when test="$is-json and $json-as-xml">
-              <p:cast-content-type content-type="text/xml"/>
-              <p:wrap match="/*" wrapper="xtlcon:document"/>
-            </p:when>
-            <!-- JSON as text: -->
-            <p:when test="$is-json">
-              <p:identity>
-                <p:with-input>
-                  <xtlcon:document xml:space="preserve">{serialize(.)}</xtlcon:document>
-                </p:with-input>
-              </p:identity>
-            </p:when>
-            <!-- XML: -->
-            <p:otherwise>
-              <p:wrap match="/*" wrapper="xtlcon:document"/>
-            </p:otherwise>
-          </p:choose>
-          <p:add-attribute attribute-name="content-type"
-            attribute-value="{if ($is-json and $json-as-xml) then 'application/json+xml' else $content-type}"/>
-          <p:catch>
-            <!-- Could not load, add as an external document: -->
-            <p:identity>
-              <p:with-input port="source">
-                <xtlcon:external-document content-type="application/octet-stream" ERRORG="{$content-type}"/>
-              </p:with-input>
-            </p:identity>
-          </p:catch>
-        </p:try>
-      </p:when>
-
-      <!-- No load was tried, add as an external document: -->
-      <p:otherwise>
-        <p:identity>
-          <p:with-input port="source">
-            <xtlcon:external-document content-type="{$content-type}"/>
-          </p:with-input>
-        </p:identity>
-      </p:otherwise>
-
-    </p:choose>
-
-    <p:add-attribute attribute-name="href-source" attribute-value="{$href-source-rel}"/>
   </p:for-each>
 
   <!-- Create the container root element and dress it up with the necessary attributes: -->
@@ -158,11 +104,5 @@
     <p:add-attribute attribute-name="href-target-path" attribute-value="{$href-target-path}"/>
   </p:if>
 
-  <!-- Check if we need to fill @target-path for the individual files: -->
-  <p:if test="$add-document-target-paths">
-    <p:viewport match="/xtlcon:document-container/xtlcon:*[exists(@href-source)]">
-      <p:add-attribute attribute-name="href-target" attribute-value="{/*/@href-source}"/>
-    </p:viewport>
-  </p:if>
 
 </p:declare-step>
