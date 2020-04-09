@@ -88,7 +88,7 @@
       <p:variable name="mime-type" select="string(/*/@mime-type)"/>
       
       <!-- Get the contents: -->
-      <p:filter select="/*/*[1]"/>
+      <p:unwrap match="/*"/>
       
       <!-- Store:
            - When the mime-type of a document is application/pdf *and* it has a fo:root element, it is assumed to contain XSL-FO and will 
