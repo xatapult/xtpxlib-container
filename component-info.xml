@@ -11,6 +11,9 @@
   <!-- ================================================================== -->
 
   <releases>
+    <release version="1.0.B" date="2020-04-09">
+      Bugfix for copying binary files referenced from a container.
+    </release>
     <release version="1.0.A" date="2020-02-16">
       New logo and minor fixes
     </release>
