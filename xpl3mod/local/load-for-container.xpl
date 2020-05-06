@@ -12,7 +12,7 @@
   <!-- SETUP: -->
 
   <p:option name="href-zip" as="xs:string?" required="false" select="()">
-    <p:documentation>Name of the zip file to use. If () load from the file system.</p:documentation>
+    <p:documentation>Name of the zip file to use. If (), load from the file system.</p:documentation>
   </p:option>
 
   <p:option name="href-source-abs" as="xs:string?" required="false" select="()">
@@ -68,13 +68,13 @@
 
     <!--Try to load it and treat is as the content-type we expect. If this fails, handle it as an external reference.: -->
     <p:when test="$do-try-load">
-     <!-- <p:try>-->
+      <p:try>
 
         <!-- Find out where to load it from and the load it, forced to the right content-type: -->
         <p:choose>
           <p:when test="exists($href-zip)">
             <p:variable name="href-source-rel-regexp-escaped-anchored" select="'^' || replace($href-source-rel, '([.\\?*+|\^${}()])', '\\$1') || '$'"/>
-            <p:unarchive format="zip" message="REL: {$href-source-rel-regexp-escaped-anchored} {$content-type}">
+            <p:unarchive format="zip">
               <p:with-input port="source" href="{$href-zip}"/>
               <p:with-option name="include-filter" select="$href-source-rel-regexp-escaped-anchored"/>
               <p:with-option name="override-content-types" select="[ [$href-source-rel-regexp-escaped-anchored, $content-type] ]"/>
@@ -117,15 +117,15 @@
           attribute-value="{if ($is-json and $json-as-xml) then 'application/json+xml' else $content-type}"/>
 
         <!-- Could not load or something else went wrong, add as an external binary document: -->
-       <!-- <p:catch>
+        <p:catch>
           <p:identity>
             <p:with-input port="source">
               <xtlcon:external-document content-type="application/octet-stream"/>
             </p:with-input>
           </p:identity>
-        </p:catch>-->
+        </p:catch>
 
-      <!--</p:try>-->
+      </p:try>
     </p:when>
 
     <!-- No load was tried at all, add as an external document: -->

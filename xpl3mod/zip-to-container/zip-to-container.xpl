@@ -72,7 +72,7 @@
   <!-- Get the archive's contents: -->
   <p:archive-manifest>
     <p:with-input href="{$href-source-zip}"/>
-    <!--<p:with-option name="override-content-types" select="$override-content-types"/>-->
+    <p:with-option name="override-content-types" select="$override-content-types"/>
   </p:archive-manifest>
 
   <!-- Filter it according to the include and exclude filter settings: -->
@@ -86,7 +86,6 @@
         </p:when>
         <p:when test="some $regexp in $exclude-filter satisfies matches($name, $regexp)">
           <p:identity>
-            <!-- TBD: Maybe we can do TVT expansion in comments later? -->
             <p:with-input port="source">
               <p:inline>
                 <!-- Entry removed because of include/exclude filter settings -->
@@ -112,7 +111,6 @@
         </p:when>
         <p:otherwise>
           <p:identity>
-            <!-- TBD: Maybe we can do TVT expansion in comments later? -->
             <p:with-input port="source">
               <p:inline>
                 <!-- Entry removed because of depth setting -->
@@ -140,11 +138,11 @@
     </xtlcon:load-for-container>
     
   </p:for-each>
-  
 
   <!-- Create the container root element and dress it up with the necessary attributes: -->
   <p:wrap-sequence wrapper="xtlcon:document-container"/>
   <p:add-attribute attribute-name="timestamp" attribute-value="{current-dateTime()}"/>
+  <p:add-attribute attribute-name="href-source-zip" attribute-value="{$href-source-zip}"/>
   <p:if test="string($href-target-path) ne ''">
     <p:add-attribute attribute-name="href-target-path" attribute-value="{$href-target-path}"/>
   </p:if>

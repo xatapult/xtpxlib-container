@@ -40,11 +40,11 @@
     <p:documentation>Whether to load HTML files.</p:documentation>
   </p:option>
 
-  <p:option name="load-text" as="xs:boolean" required="false" select="false()">
+  <p:option name="load-text" as="xs:boolean" required="false" select="true()">
     <p:documentation>Whether to load text files.</p:documentation>
   </p:option>
 
-  <p:option name="load-json" as="xs:boolean" required="false" select="true()">
+  <p:option name="load-json" as="xs:boolean" required="false" select="false()">
     <p:documentation>Whether to load JSON files.</p:documentation>
   </p:option>
 
