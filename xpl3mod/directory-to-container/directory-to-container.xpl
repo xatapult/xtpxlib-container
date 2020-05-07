@@ -44,11 +44,11 @@
     <p:documentation>Whether to load text files.</p:documentation>
   </p:option>
 
-  <p:option name="load-json" as="xs:boolean" required="false" select="false()">
+  <p:option name="load-json" as="xs:boolean" required="false" select="true()">
     <p:documentation>Whether to load JSON files.</p:documentation>
   </p:option>
 
-  <p:option name="json-as-xml" as="xs:boolean" required="false" select="false()">
+  <p:option name="json-as-xml" as="xs:boolean" required="false" select="true()">
     <p:documentation>When json files are loaded (`option $load-json` is `true`): whether to add them to the container as XML or as JSON text.
       It will set the entry's content type to `application/json+xml`.
     </p:documentation>
