@@ -5,11 +5,7 @@
   type="xtlcon:directory-to-container">
 
   <p:documentation>
-    TBD
-    
-    CHECK DEFAULTS ON ALL OPTIONS AND PORTS
-    
-    Record the idea behind add-document-target-paths and href-target-path
+    Loads a directory (with optional sub-directories) into an xtpxlib container structure.
   </p:documentation>
 
   <!-- ================================================================== -->
@@ -17,14 +13,21 @@
 
   <p:import href="../../../xtpxlib-common/xpl3mod/recursive-directory-list/recursive-directory-list.xpl"/>
   <p:import href="../local/load-for-container.xpl"/>
+  
+  <!-- Development setting: -->
+  <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
+  <p:option name="develop-load-html" as="xs:boolean" static="true" select="true()"/>
+  <p:option name="develop-load-text" as="xs:boolean" static="true" select="true()"/>
+  <p:option name="develop-load-json" as="xs:boolean" static="true" select="true()"/>
+  <p:option name="develop-load-json-as-xml" as="xs:boolean" static="true" select="false()"/>
 
   <!-- TBD remove default and make required -->
-  <p:option name="href-source-directory" as="xs:string" required="false"
-    select="'file:/C:/Data/Erik/work/xatapult/xtpxlib-container/xpl3mod/directory-to-container/test/'">
+  <p:option use-when="not($develop)" name="href-source-directory" as="xs:string" required="true">
     <p:documentation>URI of the directory to read.</p:documentation>
   </p:option>
+  <p:option use-when="$develop" name="href-source-directory" as="xs:string" required="false" select="resolve-uri('test/', static-base-uri())"/>
 
-  <p:option name="include-filter" as="xs:string*" required="false">
+  <p:option name="include-filter" as="xs:string*" required="false" select="()">
     <p:documentation>Optional regular expression include filters.</p:documentation>
   </p:option>
 
@@ -36,30 +39,38 @@
     <p:documentation>The sub-directory depth to go. When lt `0`, all sub-directories are processed.</p:documentation>
   </p:option>
 
-  <p:option name="load-html" as="xs:boolean" required="false" select="false()">
+  <p:option name="load-html" as="xs:boolean" required="false" select="if ($develop) then $develop-load-html else false()">
     <p:documentation>Whether to load HTML files.</p:documentation>
   </p:option>
 
-  <p:option name="load-text" as="xs:boolean" required="false" select="true()">
+  <p:option name="load-text" as="xs:boolean" required="false" select="if ($develop) then $develop-load-text else false()">
     <p:documentation>Whether to load text files.</p:documentation>
   </p:option>
 
-  <p:option name="load-json" as="xs:boolean" required="false" select="true()">
+  <p:option name="load-json" as="xs:boolean" required="false" select="if ($develop) then $develop-load-json else false()">
     <p:documentation>Whether to load JSON files.</p:documentation>
   </p:option>
 
-  <p:option name="json-as-xml" as="xs:boolean" required="false" select="true()">
+  <p:option name="json-as-xml" as="xs:boolean" required="false" select="if ($develop) then $develop-load-json-as-xml else false()">
     <p:documentation>When json files are loaded (`option $load-json` is `true`): whether to add them to the container as XML or as JSON text.
-      It will set the entry's content type to `application/json+xml`.
+      It will set the appropriate entry's content type to `application/json+xml`.
     </p:documentation>
   </p:option>
 
   <p:option name="add-document-target-paths" as="xs:boolean" required="false" select="false()">
-    <p:documentation>Copies the relative source path as the target path `@target-path` for the individual documents.</p:documentation>
+    <p:documentation>Copies the relative source path as the target path `@target-path` for the individual documents.
+      
+      The idea behind this is that in some cases you want to write almost the same structure back to disk. Recording the relative source
+      path as the target path makes this easier: you don't have to set it explicitly.
+    </p:documentation>
   </p:option>
 
   <p:option name="href-target-path" as="xs:string?" required="false" select="()">
-    <p:documentation>Optional target path to record on the container.</p:documentation>
+    <p:documentation>Optional target path to record on the container.
+      
+      The idea behind this is that this makes it easier to write the container back to another location on disk, the target path is
+      already there.
+    </p:documentation>
   </p:option>
 
   <p:option name="override-content-types" as="array(array(xs:string))?" required="false" select="()">
@@ -67,7 +78,7 @@
   </p:option>
 
   <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}">
-    <p:documentation>The resulting container structure</p:documentation>
+    <p:documentation>The resulting container structure.</p:documentation>
   </p:output>
 
   <!-- ================================================================== -->
@@ -98,11 +109,10 @@
 
   <!-- Create the container root element and dress it up with the necessary attributes: -->
   <p:wrap-sequence wrapper="xtlcon:document-container"/>
-  <p:add-attribute attribute-name="href-source-path" attribute-value="{$base-dir}"/>
   <p:add-attribute attribute-name="timestamp" attribute-value="{current-dateTime()}"/>
+  <p:add-attribute attribute-name="href-source-path" attribute-value="{$base-dir}"/>
   <p:if test="string($href-target-path) ne ''">
     <p:add-attribute attribute-name="href-target-path" attribute-value="{$href-target-path}"/>
   </p:if>
-
 
 </p:declare-step>

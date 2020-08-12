@@ -70,7 +70,7 @@
     <p:when test="$do-try-load">
       <p:try>
 
-        <!-- Find out where to load it from and the load it, forced to the right content-type: -->
+        <!-- Find out where to load it from and then load it, forced to the right content-type: -->
         <p:choose>
           <p:when test="exists($href-zip)">
             <p:variable name="href-source-rel-regexp-escaped-anchored" select="'^' || replace($href-source-rel, '([.\\?*+|\^${}()])', '\\$1') || '$'"/>

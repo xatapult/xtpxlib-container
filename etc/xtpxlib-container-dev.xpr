@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="22.0">
+<project version="22.1">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="22.0" xml:space="preserve">
+            <serialized version="22.1" xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>scenario.associations</String>
@@ -80,14 +80,14 @@
                                 <field name="outputPorts">
                                     <xprocOutputPort-array>
                                         <xprocOutputPort>
-                                            <field name="portName">
-                                                <String>result</String>
-                                            </field>
                                             <field name="url">
                                                 <String>${TMP}/generate-componentdoc-result.xml</String>
                                             </field>
                                             <field name="showInSequenceView">
                                                 <Boolean>true</Boolean>
+                                            </field>
+                                            <field name="portName">
+                                                <String>result</String>
                                             </field>
                                         </xprocOutputPort>
                                     </xprocOutputPort-array>
@@ -201,5 +201,7 @@
         <folder path="../../xtpxlib-webdoc/"/>
         <folder path="../../xtpxlib-xdoc/"/>
         <folder path="../../../../../../xdata2/"/>
+        <file name="../xsd/container-xpl3.xsd"/>
+        <file name="../../../../../../xdata2/xproc3-output.xml"/>
     </projectTree>
 </project>

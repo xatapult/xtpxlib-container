@@ -140,12 +140,12 @@ When this references a document in a zip file, it holds the path inside the zip.
       <xs:annotation>
         <xs:documentation>Reference to the location where this document must be written.
 When writing to disk, a relative path is made absolute againt /*/@href-target-path.
-When writing to zip this will become the path inside the zip.</xs:documentation>
+When writing to zip this will become the path inside the zip and *must* be a relative path.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="_href-target" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Canonicalized and absolute version of @href-target. Filled by xtlcon:container-to-*.</xs:documentation>
+        <xs:documentation>Canonicalized version of @href-target. Filled by xtlcon:container-to-*.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:anyAttribute namespace="##any" processContents="skip">

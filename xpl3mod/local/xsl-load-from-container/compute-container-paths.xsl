@@ -4,8 +4,8 @@
   xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.znd_n5p_4lb" exclude-result-prefixes="#all" expand-text="true">
   <!-- ================================================================== -->
   <!-- 
-       TBD TBD
-       
+       Computes all the appropriate paths for a container when using it for a container-to-* operation and
+       fills the appropriate shadow attributes.
   -->
   <!-- ================================================================== -->
   <!-- SETUP: -->
@@ -19,6 +19,11 @@
 
   <!-- ================================================================== -->
   <!-- PARAMETERS: -->
+
+  <xsl:param name="do-container-paths-for-zip" as="xs:boolean" required="yes"/>
+
+  <!-- Target zip file as set by the pipeline. If this is set it overrides $root/@href-target-zip. -->
+  <xsl:param name="href-target-zip" as="xs:string?" required="true"/>
 
   <!-- Target path as set by the pipeline. If this is set it overrides $root/@href-target-path. -->
   <xsl:param name="href-target-path" as="xs:string?" required="true"/>
@@ -35,24 +40,45 @@
   <xsl:variable name="root" as="element(xtlcon:document-container)" select="/*"/>
 
   <!-- The base path against which all other relative paths are made absolute. 
-    This is either the base-uri of the container document or, if absent, the static base-uri of the pipeline.-->
+    This is either the base-uri of the container document or, if absent, the static base-uri of the pipeline. 
+  -->
   <xsl:variable name="global-base-path" as="xs:string">
     <xsl:variable name="base-uri-normalized" as="xs:string?" select="if (normalize-space($base-uri) eq '') then () else xtlc:href-path($base-uri)"/>
     <xsl:variable name="pipeline-path" as="xs:string" select="xtlc:href-path($pipeline-static-base-uri)"/>
     <xsl:sequence select="($base-uri-normalized, $pipeline-path)[1] => local:canonicalize-path()"/>
   </xsl:variable>
 
-  <!-- The path were things are written to. This is either the path set at the pipeline's invocation or the one defined on the root element. -->
-  <xsl:variable name="global-target-path" as="xs:string">
-    <xsl:variable name="href-target-path-normalized" as="xs:string?"
-      select="if (normalize-space($href-target-path) eq '') then () else $href-target-path"/>
-    <xsl:variable name="target-path" as="xs:string?" select="local:global-canonical-path(($href-target-path-normalized, $root/@href-target-path)[1])"/>
-    <xsl:if test="empty($target-path)">
-      <xsl:call-template name="xtlc:raise-error">
-        <xsl:with-param name="msg-parts" select="'No target path specified for xtpxlib container write operation'"/>
-      </xsl:call-template>
+  <!-- The path where things are written to. This is either the path set at the pipeline's invocation or the one defined on the root element. 
+    Will only be filled if we 're not creating a zip:
+  -->
+  <xsl:variable name="global-target-path" as="xs:string?">
+    <xsl:if test="not($do-container-paths-for-zip)">
+      <xsl:variable name="href-target-path-normalized" as="xs:string?"
+        select="if (normalize-space($href-target-path) eq '') then () else $href-target-path"/>
+      <xsl:variable name="target-path" as="xs:string?"
+        select="local:global-canonical-path(($href-target-path-normalized, $root/@href-target-path)[1])"/>
+      <xsl:if test="empty($target-path)">
+        <xsl:call-template name="xtlc:raise-error">
+          <xsl:with-param name="msg-parts" select="'No target path specified for xtpxlib container-to-disk operation'"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:sequence select="$target-path"/>
     </xsl:if>
-    <xsl:sequence select="$target-path"/>
+  </xsl:variable>
+
+  <!-- The full name of the target zip file. Will only be filled if we're creating a zip: -->
+  <xsl:variable name="global-target-zip" as="xs:string?">
+    <xsl:if test="$do-container-paths-for-zip">
+      <xsl:variable name="href-target-zip-normalized" as="xs:string?"
+        select="if (normalize-space($href-target-zip) eq '') then () else $href-target-zip"/>
+      <xsl:variable name="target-path" as="xs:string?" select="local:global-canonical-path(($href-target-zip-normalized, $root/@href-target-zip)[1])"/>
+      <xsl:if test="empty($target-path)">
+        <xsl:call-template name="xtlc:raise-error">
+          <xsl:with-param name="msg-parts" select="'No target zip specified for xtpxlib container-to-zip operation'"/>
+        </xsl:call-template>
+      </xsl:if>
+      <xsl:sequence select="$target-path"/>
+    </xsl:if>
   </xsl:variable>
 
   <xsl:variable name="global-source-zip" as="xs:string?" select="local:global-canonical-path($root/@href-source-zip)"/>
@@ -64,7 +90,14 @@
   <xsl:template match="/xtlcon:document-container">
     <xsl:copy>
       <xsl:apply-templates select="@* except @*[starts-with(local-name(.), '_')]"/>
-      <xsl:attribute name="_href-target-path" select="$global-target-path"/>
+      <xsl:choose>
+        <xsl:when test="$do-container-paths-for-zip">
+          <xsl:attribute name="_href-target-zip" select="$global-target-zip"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name="_href-target-path" select="$global-target-path"/>
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates/>
     </xsl:copy>
   </xsl:template>
@@ -114,10 +147,29 @@
         </xsl:if>
 
         <!-- Compute the target: -->
-        <xsl:call-template name="create-canonical-shadow-attribute">
-          <xsl:with-param name="path-attribute" select="@href-target"/>
-          <xsl:with-param name="value" select="local:get-canonical-path($global-target-path, @href-target)"/>
-        </xsl:call-template>
+        <xsl:choose>
+          <xsl:when test="$do-container-paths-for-zip">
+            <xsl:variable name="href-target" as="xs:string" select="string(@href-target) => translate('\', '/')"/>
+            <xsl:choose>
+              <xsl:when test="not(xtlc:href-is-absolute($href-target))">
+                <xsl:call-template name="create-canonical-shadow-attribute">
+                  <xsl:with-param name="path-attribute" select="@href-target"/>
+                  <xsl:with-param name="value" select="$href-target"/>
+                </xsl:call-template>
+              </xsl:when>
+              <xsl:otherwise> 
+                <xsl:call-template name="xtlc:raise-error">
+                  <xsl:with-param name="msg-parts" select="('Zip file target ', xtlc:q(@href-target), ' is not a relative path')"/>
+                </xsl:call-template></xsl:otherwise>
+            </xsl:choose>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:call-template name="create-canonical-shadow-attribute">
+              <xsl:with-param name="path-attribute" select="@href-target"/>
+              <xsl:with-param name="value" select="local:get-canonical-path($global-target-path, @href-target)"/>
+            </xsl:call-template>
+          </xsl:otherwise>
+        </xsl:choose>
 
       </xsl:if>
 
@@ -177,6 +229,5 @@
     <xsl:param name="path" as="xs:string"/>
     <xsl:sequence select="xtlc:href-canonical(xtlc:href-protocol-add($path, $xtlc:protocol-file, false()))"/>
   </xsl:function>
-
 
 </xsl:stylesheet>
