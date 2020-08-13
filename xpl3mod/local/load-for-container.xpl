@@ -20,7 +20,8 @@
   </p:option>
 
   <p:option name="href-source-rel" as="xs:string" required="true">
-    <p:documentation>Relative filename of the file to load. Used when loading files from a zip and recorded as @href-source on the entry.</p:documentation>
+    <p:documentation>Relative filename of the file to load. Used when loading files from a zip and recorded as @href-source 
+      on the entry.</p:documentation>
   </p:option>
 
   <p:option name="content-type" as="xs:string?" required="true">
@@ -73,7 +74,8 @@
         <!-- Find out where to load it from and then load it, forced to the right content-type: -->
         <p:choose>
           <p:when test="exists($href-zip)">
-            <p:variable name="href-source-rel-regexp-escaped-anchored" select="'^' || replace($href-source-rel, '([.\\?*+|\^${}()])', '\\$1') || '$'"/>
+            <p:variable name="href-source-rel-regexp-escaped-anchored"
+              select="'^' || replace($href-source-rel, '([.\\?*+|\^${}()\[\]])', '\\$1') || '$'"/>
             <p:unarchive format="zip">
               <p:with-input port="source" href="{$href-zip}"/>
               <p:with-option name="include-filter" select="$href-source-rel-regexp-escaped-anchored"/>

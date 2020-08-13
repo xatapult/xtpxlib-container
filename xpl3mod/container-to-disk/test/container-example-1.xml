@@ -3,6 +3,11 @@
   timestamp="2020-05-04T09:40:25+02:00" href-source-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/xpl3mod/container-to-disk/test/"
   href-target-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/tmp/container-1-out">
   
+  <xtlcon:document href-target="test-contents/xmlplaintest%20-%20Copy%5Ba%5D.xml"
+    content-type="application/xml">
+    <something>TEST XML YEAH!</something>
+  </xtlcon:document>
+  
   <xtlcon:document href-target="x.xml" serialization="{'indent': true}">
     <![CDATA[<a><b>Yeah</b></a>]]>
   </xtlcon:document>

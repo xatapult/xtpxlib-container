@@ -24,7 +24,7 @@
   <p:option use-when="not($develop)" name="href-source-zip" as="xs:string" required="true" >
     <p:documentation>URI of the directory to read.</p:documentation>
   </p:option>
-  <p:option use-when="$develop" name="href-source-zip" as="xs:string" required="false" select="resolve-uri('test/test-contents.zip', static-base-uri())"/>
+  <p:option use-when="$develop" name="href-source-zip" as="xs:string" required="false" select="resolve-uri('test/test-docx-doc.zip', static-base-uri())"/>
   
   <p:option name="include-filter" as="xs:string*" required="false">
     <p:documentation>Optional regular expression include filters.</p:documentation>
