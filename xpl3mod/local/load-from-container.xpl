@@ -10,8 +10,8 @@
     - For every document loaded, it adds the following additional properties:
       - href-target: The actual target URI for the document (absolute for writing to disk, relative for writing to zips)s
       - href-target-original: The original value as set by @href-target
-      = base-uri: This is mangled so it is unique (necessary for creating the zip since we need to address the loaded files as unique 
-        by their base-uris). No longer reflects anything in the real world any more!
+      = base-uri: Something unique (necessary for creating the zip since we need to address the loaded files as unique 
+        by their base-uris). Not reflects anything in the real world!
     - For documents stated *in* the container, it sets the property:
       - serialization: The serialization options for this document (including, most importantly, method and media-type)
     - External documents are always loaded as application/octet-stream.
@@ -66,7 +66,6 @@
       'base-uri': p:document-property(., 'base-uri'), 
       'pipeline-static-base-uri': $main-pipeline-static-base-uri 
     }">
-    <p:with-option name="global-context-item" select="."/>
     <p:with-input port="stylesheet" href="xsl-load-from-container/compute-container-paths.xsl"/>
   </p:xslt>
 
@@ -126,7 +125,7 @@
         <p:set-properties>
           <p:with-option name="properties"
             select="map{
-              'base-uri': p:document-property(., 'base-uri') || '-' || $index,
+              'base-uri': 'base-uri:///' || $index,
               'href-target': $href-target,
               'href-target-original': $href-target-original,
               'serialization': map:merge(($serialization, $base-serialization-map))            

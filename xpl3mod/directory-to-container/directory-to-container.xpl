@@ -83,7 +83,7 @@
 
   <!-- ================================================================== -->
 
-  <xtlc:recursive-directory-list flatten="true" path="{$href-source-directory}" depth="{$depth}" detailed="true">
+  <xtlc:recursive-directory-list flatten="true" path="{$href-source-directory}" depth="{$depth}" detailed="true" add-decoded="true">
     <!-- Since include/exclude filters can be sequences of strings, we'll have to pass them by p:with-option (and not as attribute): -->
     <p:with-option name="exclude-filter" select="$exclude-filter"/>
     <p:with-option name="include-filter" select="$include-filter"/>
@@ -96,7 +96,7 @@
 
     <xtlcon:load-for-container>
       <p:with-option name="href-source-abs" select="/*/@href-abs"/>
-      <p:with-option name="href-source-rel" select="/*/@href-rel"/>
+      <p:with-option name="href-source-rel" select="/*/@href-rel-decoded"/>
       <p:with-option name="content-type" select="/*/@content-type"/>
       <p:with-option name="load-html" select="$load-html"/>
       <p:with-option name="load-text" select="$load-text"/>

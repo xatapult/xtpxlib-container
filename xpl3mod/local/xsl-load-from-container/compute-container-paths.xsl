@@ -136,6 +136,7 @@
         <xsl:if test="$is-external-document">
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source-zip"/>
+            <xsl:with-param name="path-attribute-name" select="'href-source-zip'"/>
             <xsl:with-param name="value" select="local:global-canonical-path(@href-source-zip)"/>
             <xsl:with-param name="default" select="$global-source-zip"/>
             <xsl:with-param name="enabled" select="$from-zip"/>
@@ -157,16 +158,17 @@
                   <xsl:with-param name="value" select="$href-target"/>
                 </xsl:call-template>
               </xsl:when>
-              <xsl:otherwise> 
+              <xsl:otherwise>
                 <xsl:call-template name="xtlc:raise-error">
                   <xsl:with-param name="msg-parts" select="('Zip file target ', xtlc:q(@href-target), ' is not a relative path')"/>
-                </xsl:call-template></xsl:otherwise>
+                </xsl:call-template>
+              </xsl:otherwise>
             </xsl:choose>
           </xsl:when>
           <xsl:otherwise>
             <xsl:call-template name="create-canonical-shadow-attribute">
               <xsl:with-param name="path-attribute" select="@href-target"/>
-              <xsl:with-param name="value" select="local:get-canonical-path($global-target-path, @href-target)"/>
+              <xsl:with-param name="value" select="xtlc:href-add-encoding(local:get-canonical-path($global-target-path, @href-target))"/>
             </xsl:call-template>
           </xsl:otherwise>
         </xsl:choose>
@@ -185,6 +187,8 @@
 
   <xsl:template name="create-canonical-shadow-attribute" as="attribute()*">
     <xsl:param name="path-attribute" as="attribute()?" required="false" select="."/>
+    <xsl:param name="path-attribute-name" as="xs:string" required="false"
+      select="if (exists($path-attribute)) then local-name($path-attribute) else ''"/>
     <xsl:param name="value" as="xs:string?" required="true"/>
     <xsl:param name="default" as="xs:string?" required="false" select="()"/>
     <xsl:param name="enabled" as="xs:boolean" required="false" select="true()"/>
@@ -192,10 +196,10 @@
     <!-- Always output the original: -->
     <xsl:copy-of select="$path-attribute"/>
     <!-- If we have a value for this, output the canonical equivalent attribute: -->
-    <xsl:if test="$enabled">
+    <xsl:if test="$enabled and ($path-attribute-name ne '')">
       <xsl:variable name="canonical-attribute-value" as="xs:string" select="($value, $default)[1]"/>
       <xsl:if test="exists($canonical-attribute-value)">
-        <xsl:attribute name="_{local-name($path-attribute)}" select="$canonical-attribute-value"/>
+        <xsl:attribute name="_{$path-attribute-name}" select="$canonical-attribute-value"/>
       </xsl:if>
     </xsl:if>
   </xsl:template>

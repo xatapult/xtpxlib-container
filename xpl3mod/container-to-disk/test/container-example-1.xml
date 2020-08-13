@@ -2,12 +2,14 @@
   xsi:schemaLocation="http://www.xtpxlib.nl/ns/container ../../../xsd/container-xpl3.xsd" xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"
   timestamp="2020-05-04T09:40:25+02:00" href-source-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/xpl3mod/container-to-disk/test/"
   href-target-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/tmp/container-1-out">
-  
-  <xtlcon:document href-target="test-contents/xmlplaintest%20-%20Copy%5Ba%5D.xml"
+
+  <!--<xtlcon:document href-target="test-contents/xmlplaintest - X [a].xml"
     content-type="application/xml">
     <something>TEST XML YEAH!</something>
-  </xtlcon:document>
-  
+  </xtlcon:document>-->
+
+  <xtlcon:external-document href-source="contents/xmlplaintest.xml" href-target="test-contents/xmlplaintest - X [a].xml"/>
+
   <xtlcon:document href-target="x.xml" serialization="{'indent': true}">
     <![CDATA[<a><b>Yeah</b></a>]]>
   </xtlcon:document>
@@ -35,7 +37,7 @@
       </body>
     </html>
   </xtlcon:document>
-  
+
   <xtlcon:document href-target="jsonfromxml.json" content-type="application/json+xml">
     <map xmlns="http://www.w3.org/2005/xpath-functions">
       <string key="key">val from json+xml</string>
