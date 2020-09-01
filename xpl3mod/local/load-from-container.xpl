@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
   xmlns:array="http://www.w3.org/2005/xpath-functions/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
-  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0" exclude-inline-prefixes="#all"
-  type="xtlcon:load-from-container">
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0" type="xtlcon:load-from-container"
+  name="load-from-container">
 
   <p:documentation>
-    Step that loads the files as specified by a container that need to be written to disk:
+    Step that loads the files, as specified by a container, that need to be written to disk:
     - Only loads the documents for which an `href-target` is there
     - For every document loaded, it adds the following additional properties:
       - href-target: The actual target URI for the document (absolute for writing to disk, relative for writing to zips)s
@@ -28,16 +28,16 @@
   <p:input port="source" primary="true" sequence="false" content-types="xml">
     <p:documentation>The container to load</p:documentation>
   </p:input>
-  
+
   <p:option name="do-container-paths-for-zip" as="xs:boolean" required="true">
     <p:documentation>Set to true for container-to-zip, false otherwise.</p:documentation>
   </p:option>
-  
+
   <p:option name="href-target-zip" as="xs:string?" required="false" select="()">
     <p:documentation>Zip file location. When you specify this it will have precedence over a /*/@href-target-zip.
     </p:documentation>
   </p:option>
-  
+
   <p:option name="href-target-path" as="xs:string?" required="false" select="()">
     <p:documentation>Base path where to write the documents, used for computing the target locations. 
       When you specify this it will have precedence over a /*/@href-target-path.
@@ -52,13 +52,19 @@
     <p:documentation>The resulting documents with some additional document properties (see pipeline description).</p:documentation>
   </p:output>
 
-  <p:output port="container" primary="false" sequence="false" content-types="xml" pipe="@amend-container">
+  <p:output port="container" primary="false" sequence="false" content-types="xml" pipe="@amended-container">
     <p:documentation>The original container, supplemented with additional shadow attributes for the paths and filenames.</p:documentation>
   </p:output>
 
   <!-- ================================================================== -->
 
-  <p:xslt name="amend-container"
+  <p:store href="../container-to-zip/tmp/at-input.xml"/>
+
+
+  <!-- *** Moving-namespace-in-xslt problem workaround: We remove all inner content and re-get this from the source again 
+    in the viewport below... -->
+  <p:delete match="/xtlcon:document-container/xtlcon:document/node()"/>
+  <p:xslt
     parameters="map{ 
       'do-container-paths-for-zip': $do-container-paths-for-zip,
       'href-target-zip': $href-target-zip, 
@@ -68,6 +74,22 @@
     }">
     <p:with-input port="stylesheet" href="xsl-load-from-container/compute-container-paths.xsl"/>
   </p:xslt>
+  <p:viewport match="/xtlcon:document-container/xtlcon:document" name="re-insert-viewport">
+    <p:variable name="document-index" as="xs:integer" select="xs:integer(/*/@_document-index)"/>
+    <!-- Get the nodes in from the original and wrap them in a temporary element to get some XML document we can re-insert: -->
+    <p:identity>
+      <p:with-input pipe="source@load-from-container" select="/xtlcon:document-container/xtlcon:document[$document-index]/node()"/>
+    </p:identity>
+    <p:wrap-sequence wrapper="xtlcon:_INSERT" name="wrapped-original"/>
+    <!-- Re-insert the original back in and remove the temporary wrapper element: -->
+    <p:insert match="/*" position="first-child">
+      <p:with-input port="source" pipe="current@re-insert-viewport"/>
+      <p:with-input port="insertion" pipe="result@wrapped-original"/>
+    </p:insert>
+    <p:delete match="/*/@_document-index"/>
+    <p:unwrap match="xtlcon:_INSERT"/>
+  </p:viewport>
+  <p:identity name="amended-container"/>
 
   <!-- Get the documents: -->
   <p:for-each>
@@ -121,7 +143,7 @@
             </xtlcon:report-error>
           </p:catch>
         </p:try>
-        <!-- Set the document properties for the embedded document: -->
+        <!-- Set the document properties for the now stand-alone document: -->
         <p:set-properties>
           <p:with-option name="properties"
             select="map{
@@ -169,7 +191,8 @@
               'base-uri': p:document-property(., 'base-uri') || '-' || $index,
               'href-target': $href-target,
               'href-target-original': $href-target-original
-            }"/>
+            }"
+          />
         </p:set-properties>
       </p:otherwise>
 

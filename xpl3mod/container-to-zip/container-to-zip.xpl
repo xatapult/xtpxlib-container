@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
   xmlns:array="http://www.w3.org/2005/xpath-functions/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:local="#local.c33_3tp_4lb"
-  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" version="3.0" exclude-inline-prefixes="#all" type="xtlcon:container-to-zip">
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" version="3.0" type="xtlcon:container-to-zip">
 
   <p:documentation>
     Writes an xtpxlib container structure to a zip file. A name for the output zip can be specified in either option $href-target-zip or
@@ -18,7 +18,7 @@
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
 
   <p:input port="source" primary="true" sequence="false" content-types="xml">
-    <p:document use-when="$develop" href="test/container-example-1.xml"/>
+    <p:document use-when="$develop" href="test/container-with-namespaces.xml"/>
     <p:documentation>The container to process.</p:documentation>
   </p:input>
 
@@ -66,15 +66,16 @@
   <!-- ======================================================================= -->
 
   <!-- Load  the contents of the container: -->
+  
   <xtlcon:load-from-container do-container-paths-for-zip="true" main-pipeline-static-base-uri="{static-base-uri()}"
     href-target-zip="{$href-target-zip}" name="load-from-container"/>
-
+  
   <!-- Create a manifest: -->
   <local:create-zip-manifest name="create-zip-manifest"/>
-
+  
   <!-- Create the zip and store it in the location as defined on the supplemented manifest: -->
   <p:archive format="zip" name="archive">
-    <p:with-input port="manifest" pipe="manifest"/>
+    <p:with-input port="manifest" pipe="manifest@create-zip-manifest"/>
   </p:archive>
   <p:store>
     <p:with-option name="href" select="/*/@_href-target-zip" pipe="container@load-from-container"/>
