@@ -24,7 +24,7 @@
 
   <p:option name="href-target-zip" as="xs:string?" required="false" select="()">
     <p:documentation>Nem of the zip file to write. When you specify this it will have precedence 
-      over a /*/@href-target-zip.</p:documentation>
+      over a `/*/@href-target-zip`.</p:documentation>
   </p:option>
 
   <p:output port="result" primary="true" sequence="false" content-types="xml" serialization="map{'method': 'xml', 'indent': true()}"

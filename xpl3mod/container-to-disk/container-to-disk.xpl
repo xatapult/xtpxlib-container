@@ -4,7 +4,7 @@
   xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" version="3.0" exclude-inline-prefixes="#all" type="xtlcon:container-to-disk">
 
   <p:documentation>
-    Writes an xtpxlib container structure to disk. A base path must be provided, either as option $href-target path or as 
+    Writes an xtpxlib container structure to disk. A base path must be provided, either as option `$href-target` path or as `/*/@href-target`.
   </p:documentation>
 
   <!-- ================================================================== -->
@@ -68,11 +68,11 @@
   <xtlcon:load-from-container do-container-paths-for-zip="false" main-pipeline-static-base-uri="{static-base-uri()}"
     href-target-path="{$href-target-path}" name="load-from-container"/>
 
-  <local:delete-directory remove-target="{$remove-target}">
+  <local:delete-directory remove-target="{$remove-target}" >
     <p:with-input port="container" pipe="container@load-from-container"/>
   </local:delete-directory>
 
-  <p:for-each>
+  <p:for-each >
     <p:variable name="href-target" as="xs:string" select="p:document-property(., 'href-target')"/>
     <p:try>
       <p:store href="{$href-target}"/>

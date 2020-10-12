@@ -58,38 +58,16 @@
 
   <!-- ================================================================== -->
 
-  <p:store href="../container-to-zip/tmp/at-input.xml"/>
-
-
-  <!-- *** Moving-namespace-in-xslt problem workaround: We remove all inner content and re-get this from the source again 
-    in the viewport below... -->
-  <p:delete match="/xtlcon:document-container/xtlcon:document/node()"/>
-  <p:xslt
+  <p:xslt name="amended-container"
     parameters="map{ 
-      'do-container-paths-for-zip': $do-container-paths-for-zip,
-      'href-target-zip': $href-target-zip, 
-      'href-target-path': $href-target-path, 
-      'base-uri': p:document-property(., 'base-uri'), 
-      'pipeline-static-base-uri': $main-pipeline-static-base-uri 
-    }">
+        'do-container-paths-for-zip': $do-container-paths-for-zip,
+        'href-target-zip': $href-target-zip, 
+        'href-target-path': $href-target-path, 
+        'base-uri': p:document-property(., 'base-uri'), 
+        'pipeline-static-base-uri': $main-pipeline-static-base-uri 
+      }">
     <p:with-input port="stylesheet" href="xsl-load-from-container/compute-container-paths.xsl"/>
   </p:xslt>
-  <p:viewport match="/xtlcon:document-container/xtlcon:document" name="re-insert-viewport">
-    <p:variable name="document-index" as="xs:integer" select="xs:integer(/*/@_document-index)"/>
-    <!-- Get the nodes in from the original and wrap them in a temporary element to get some XML document we can re-insert: -->
-    <p:identity>
-      <p:with-input pipe="source@load-from-container" select="/xtlcon:document-container/xtlcon:document[$document-index]/node()"/>
-    </p:identity>
-    <p:wrap-sequence wrapper="xtlcon:_INSERT" name="wrapped-original"/>
-    <!-- Re-insert the original back in and remove the temporary wrapper element: -->
-    <p:insert match="/*" position="first-child">
-      <p:with-input port="source" pipe="current@re-insert-viewport"/>
-      <p:with-input port="insertion" pipe="result@wrapped-original"/>
-    </p:insert>
-    <p:delete match="/*/@_document-index"/>
-    <p:unwrap match="xtlcon:_INSERT"/>
-  </p:viewport>
-  <p:identity name="amended-container"/>
 
   <!-- Get the documents: -->
   <p:for-each>

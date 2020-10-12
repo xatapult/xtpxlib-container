@@ -128,7 +128,7 @@
       <xsl:if test="not($is-external-document)">
         <xsl:attribute name="_document-index" select="count(preceding-sibling::xtlcon:document) + 1"/>
       </xsl:if>
-      
+
       <!-- Since we're only going to write stuff when this thing has a @href-target, we don't have to do anything when it doesn't have this: -->
       <xsl:if test="normalize-space(@href-target) ne ''">
 
@@ -178,19 +178,9 @@
 
       </xsl:if>
 
-      <xsl:for-each select="*[1]">
-        <xsl:variable name="current-elm" as="element()" select="."/>
-        <xsl:copy>
-          <xsl:namespace name="TEST" select="'#test'"></xsl:namespace>
-          <xsl:for-each select="in-scope-prefixes($current-elm)">
-            <xsl:namespace name="{.}" select="namespace-uri-for-prefix(., $current-elm)"/>
-          </xsl:for-each>
-          
-          <xsl:copy-of select="@*"/>
-          <xsl:copy-of select="node()"/>
-        </xsl:copy>
-      </xsl:for-each>
-
+      <!-- Copy contents also: -->
+      <xsl:apply-templates/>
+      
     </xsl:copy>
 
   </xsl:template>

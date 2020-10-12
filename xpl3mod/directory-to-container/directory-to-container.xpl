@@ -19,7 +19,7 @@
   <p:option name="develop-load-html" as="xs:boolean" static="true" select="true()"/>
   <p:option name="develop-load-text" as="xs:boolean" static="true" select="true()"/>
   <p:option name="develop-load-json" as="xs:boolean" static="true" select="true()"/>
-  <p:option name="develop-load-json-as-xml" as="xs:boolean" static="true" select="false()"/>
+  <p:option name="develop-load-json-as-xml" as="xs:boolean" static="true" select="true()"/>
 
   <!-- TBD remove default and make required -->
   <p:option use-when="not($develop)" name="href-source-directory" as="xs:string" required="true">
@@ -52,8 +52,8 @@
   </p:option>
 
   <p:option name="json-as-xml" as="xs:boolean" required="false" select="if ($develop) then $develop-load-json-as-xml else false()">
-    <p:documentation>When json files are loaded (`option $load-json` is `true`): whether to add them to the container as XML or as JSON text.
-      It will set the appropriate entry's content type to `application/json+xml`.
+    <p:documentation>When JSON files are loaded (`option $load-json` is `true`): whether to add them to the container as XML or as JSON text.
+      It will set the entry's content type to `application/json+xml`.
     </p:documentation>
   </p:option>
 
