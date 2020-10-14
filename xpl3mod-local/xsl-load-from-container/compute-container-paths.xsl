@@ -14,8 +14,8 @@
 
   <xsl:mode on-no-match="shallow-copy"/>
 
-  <xsl:include href="../../../../xtpxlib-common/xslmod/general.mod.xsl"/>
-  <xsl:include href="../../../../xtpxlib-common/xslmod/href.mod.xsl"/>
+  <xsl:include href="../../../xtpxlib-common/xslmod/general.mod.xsl"/>
+  <xsl:include href="../../../xtpxlib-common/xslmod/href.mod.xsl"/>
 
   <!-- ================================================================== -->
   <!-- PARAMETERS: -->

@@ -124,7 +124,7 @@ On writing a container, if not present, text/xml is assumed for internal documen
   <xs:attributeGroup name="ag-document-base-attributes">
     <xs:attribute name="href-source-zip" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Reference to the zip file that was the source for this container. If present overrides /*/@href-source-zip.
+        <xs:documentation>Reference to the zip file that was the source for this document. If present overrides /*/@href-source-zip.
 Used by the xtlcon:container-to* pipelines to find the document.
 </xs:documentation>
       </xs:annotation>

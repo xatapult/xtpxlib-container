@@ -10,8 +10,8 @@
   <!-- ================================================================== -->
   <!-- SETUP: -->
 
-  <p:import href="../local/load-from-container.xpl"/>
-  <p:import href="../local/report-error.xpl"/>
+  <p:import href="../../xpl3mod-local/load-for-container.xpl"/>
+  <p:import href="../../xpl3mod-local/report-error.xpl"/>
 
   <!-- Development setting: -->
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>

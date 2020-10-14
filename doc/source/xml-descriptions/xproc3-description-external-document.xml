@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  name="xtlcon:external-document" id="xproc3-external-document-element">
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <attribute name="href-source">
+    <description>
+      <para>href of the source for this document. Will be filled by <code><link linkend="xproc3-directory-to-container.xpl"
+            >xtlcon:directory-to-container</link></code> and the <code><link linkend="xproc3-zip-to-container.xpl"
+          >xtlcon:zip-to-container</link></code> pipelines.</para>
+      <para>When this document comes from disk, it holds the the relative filename against the value of the container's
+          <code>/*/@href-source-path</code>.</para>
+      <para>When this document comes from a zip file, it holds the (relative) href of the file <emphasis>in</emphasis> the zip.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target">
+    <description>
+      <para>href of the target location for this document. Used by the <code><link linkend="xproc3-container-to-disk.xpl"
+            >xtlcon:container-to-disk</link></code> and <code><link linkend="xproc3-container-to-zip.xpl">xtlcon:container-to-zip</link></code>
+        pipelines.</para>
+      <para>When writing to disk, a relative filename is made absolute against the container's <code>/*/@href-target-path</code>.</para>
+      <para>When writing to a zip, it <emphasis>must</emphasis> be a relative filename. This will become the path of the file <emphasis>in</emphasis>
+        the zip file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-source-zip">
+    <description>
+      <para>If present, overrides the value of the container's <code>/*/@href-source-zip</code></para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="not-in-zip">
+    <description>
+      <para>Forces this document to load from disk, even when a zip file reference is specified.</para>
+    </description>
+    <type name="xs:boolean"/>
+  </attribute>
+
+  <attribute name="(any)" default="false">
+    <description>
+      <para>Any other attributes are allowed, so additional processing information can be added.</para>
+    </description>
+  </attribute>
+
+  <!-- ================================================================== -->
+
+  <element name="(any)" occurs="*">
+    <description>
+      <para>Any contents allowed for additional processing purposes.</para>
+    </description>
+  </element>
+
+</element-description>

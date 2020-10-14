@@ -12,7 +12,7 @@
   <!-- SETUP: -->
 
   <p:import href="../../../xtpxlib-common/xpl3mod/recursive-directory-list/recursive-directory-list.xpl"/>
-  <p:import href="../local/load-for-container.xpl"/>
+  <p:import href="../../xpl3mod-local/load-for-container.xpl"/>
 
   <!-- Development setting: -->
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>

@@ -4,15 +4,15 @@
   xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" version="3.0" type="xtlcon:container-to-zip">
 
   <p:documentation>
-    Writes an xtpxlib container structure to a zip file. A name for the output zip can be specified in either option $href-target-zip or
-    on the container in /*/@href-target-zip.
+    Writes an xtpxlib container structure to a zip file. A name for the output zip can be specified in either option `$href-target-zip` or
+    on the container in `/*/@href-target-zip`.
   </p:documentation>
 
   <!-- ================================================================== -->
   <!-- SETUP: -->
 
-  <p:import href="../local/load-from-container.xpl"/>
-  <p:import href="../local/report-error.xpl"/>
+  <p:import href="../../xpl3mod-local/load-from-container.xpl"/>
+  <p:import href="../../xpl3mod-local/report-error.xpl"/>
 
   <!-- Development setting: -->
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
