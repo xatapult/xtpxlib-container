@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+  targetNamespace="http://www.xtpxlib.nl/ns/container" vc:minVersion="1.1" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container">
+  <xs:annotation>
+    <xs:documentation>Schema for an XML container (XProc 3 based pipelines)</xs:documentation>
+  </xs:annotation>
+  <xs:element name="document-container">
+    <xs:annotation>
+      <xs:documentation>Root element for a document container.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="document">
+          <xs:annotation>
+            <xs:documentation>An internal container document.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType defaultAttributesApply="true" mixed="true">
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:any namespace="##any" processContents="skip">
+                <xs:annotation>
+                  <xs:documentation/>
+                </xs:annotation>
+              </xs:any>
+            </xs:choice>
+            <xs:attributeGroup ref="xtlcon:ag-document-base-attributes"/>
+            <xs:attribute name="content-type" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Content (MIME) type of the document. 
+On writing a container, if not present, text/xml is assumed for internal documents and application/octet-stream for external documents.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="serialization" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Serialization settings for this document, expressed as a JSON map. All single quotes will be converted to double quotes before JSON parsing is done (so {'indent': true} is ok). </xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="external-document">
+          <xs:annotation>
+            <xs:documentation>Reference to an external document.</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Optional additional data for processing purposes.</xs:documentation>
+              </xs:annotation>
+              <xs:any namespace="##any" processContents="skip"> </xs:any>
+            </xs:sequence>
+            <xs:attributeGroup ref="xtlcon:ag-document-base-attributes"/>
+            <xs:attribute default="false" name="not-in-zip" type="xs:boolean">
+              <xs:annotation>
+                <xs:documentation>Forces this document to load from disk, even when a zip file reference is specified.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="_href-source" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Canonicalized version of @href-source. Filled by xtlcon:container-to-*.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="_href-source-zip" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>Canonicalized and absolute version of @href-zource-zip. Filled by xtlcon:container-to-*.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:any processContents="skip" notNamespace="##targetNamespace">
+          <xs:annotation>
+            <xs:documentation>Optional additional data (in a different namespace) for processing purposes.</xs:documentation>
+          </xs:annotation>
+        </xs:any>
+      </xs:choice>
+      <xs:attribute name="timestamp" type="xs:dateTime" use="required"/>
+      <xs:attribute name="href-source-zip" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Reference to the zip file that was the source for this container. Filled by xtlcon:zip-to-container.
+</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="_href-source-zip" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Canonicalized and absolute version of @href-source-zip. Filled by xtlcon:container-to-*.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="href-source-path" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Reference to the root source directory where this content came from. Filled by xtlcon:directory-to-container.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="_href-source-path" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Canonicalized and absolute version of @href-source-path. Filled by xtlcon:container-to-*.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="href-target-path" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Base path for writing the contents of this container to disk. Used by xtlcon:container-to-disk.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="_href-target-path" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Canonicalized and absolute version of @href-target-path. Filled by xtlcon:container-to-disk.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="href-target-zip" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Name of the zip file to write this container to. Used by xtlcon:container-to-zip.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="_href-target-zip" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Canonicalized and absolute version of @href-target-zip. Filled by xtlcon:container-to-disk.</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:anyAttribute namespace="##any" processContents="skip">
+        <xs:annotation>
+          <xs:documentation>Optional additional attributes for processing purposes.</xs:documentation>
+        </xs:annotation>
+      </xs:anyAttribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:attributeGroup name="ag-document-base-attributes">
+    <xs:attribute name="href-source-zip" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Reference to the zip file that was the source for this document. If present overrides /*/@href-source-zip.
+Used by the xtlcon:container-to* pipelines to find the document.
+</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="href-source" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Reference to the source document for this entry. 
+When this references a file on disk, relative files are made absolute against /*/@href-source-path.
+When this references a document in a zip file, it holds the path inside the zip.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="href-target" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Reference to the location where this document must be written.
+When writing to disk, a relative path is made absolute againt /*/@href-target-path.
+When writing to zip this will become the path inside the zip and *must* be a relative path.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="_href-target" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Canonicalized version of @href-target. Filled by xtlcon:container-to-*.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##any" processContents="skip">
+      <xs:annotation>
+        <xs:documentation>Optional additional attributes for processing purposes.</xs:documentation>
+      </xs:annotation>
+    </xs:anyAttribute>
+  </xs:attributeGroup>
+</xs:schema>

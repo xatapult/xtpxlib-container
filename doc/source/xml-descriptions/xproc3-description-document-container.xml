@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  name="xtlcon:document-container" id="xproc3-document-container">
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <attribute name="timestamp" required="true">
+    <description>
+      <para>The timestamp when this container was initially created/generated.</para>
+    </description>
+    <type name="xs:dateTime"/>
+  </attribute>
+
+  <attribute name="href-source-path">
+    <description>
+      <para>When the container was read from a directory (using <code><link linkend="xproc3-directory-to-container.xpl"
+            >xtlcon:directory-to-container</link></code>), this attribute holds the href of this directory.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target-path">
+    <description>
+      <para>Contains the path for the directory when writing the container to (using <code><link linkend="xproc3-container-to-disk.xpl"
+            >xtlcon:container-to-disk</link></code>).</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-source-zip">
+    <description>
+      <para>When the container was read from a zip file (using <code><link linkend="xproc3-zip-to-container.xpl"
+        >xtlcon:zip-to-container</link></code>), this attribute holds the href of this zip file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target-zip">
+    <description>
+      <para>Holds the path for the zip file when zipping the container's contents (using <code><link linkend="xproc3-container-to-zip.xpl"
+            >xtlcon:container-to-zip</link></code>).</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="(any)">
+    <description>
+      <para>Any other attributes are allowed, so additional processing information can be added.</para>
+    </description>
+  </attribute>
+
+  <!-- ================================================================== -->
+
+  <choice occurs="*">
+
+    <element name="xtlcon:document">
+      <description>
+        <para>A document inside the container structure. See <xref linkend="sect-xproc3-internal-documents"/>.</para>
+      </description>
+    </element>
+
+    <element name="xtlcon:external-document">
+      <description>
+        <para>An external document, referenced from the container structure. See <xref linkend="sect-xproc3-external-documents"/>.</para>
+      </description>
+    </element>
+
+    <element name="(any)">
+      <description>
+        <para>Any other elements are allowed (in a different namespace), so additional processing information can be added.</para>
+      </description>
+    </element>
+
+  </choice>
+
+</element-description>

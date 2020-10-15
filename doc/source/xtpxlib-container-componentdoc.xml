@@ -35,8 +35,8 @@
     <para>In working with XML or HTML, it is often the case that you need to work with multiple documents <emphasis>at the same time</emphasis>. And
       in most cases that's rather awkward. For instance, an XSLT transformation processes a single document. And yes, of course you can get others by
       calling the <code>doc()</code> function or produce others using <tag>xsl:result-document</tag>. But, especially when there are a lot of
-      relations between the documents, requires careful and sometimes heavy programming. The idea of <emphasis>XML&#160;containers</emphasis> tries to
-      make this all more manageable.</para>
+      relations between the documents, this requires careful and sometimes heavy programming. The idea of <emphasis>XML&#160;containers</emphasis>
+      tries to make this more manageable.</para>
 
 
     <para>An XML container (as handled/used by this module) is an XML structure that holds other XML documents and references to binary files. Here is
@@ -107,16 +107,15 @@
       <title>Working with containers</title>
 
       <para>The container format is described <link linkend="chapter-container-format">here</link> Working with XML container documents is done using
-        XProc (1.0) pipelines which are described <link linkend="chapter-xproc-libraries">here</link>.</para>
+          <link linkend="chapter-xproc-libraries">XProc 1.0</link> or <link linkend="chapter-xproc-libraries">XProc 3.0</link> pipelines.</para>
+
+      <para><emphasis role="bold">WARNING:</emphasis> The container formats and processing features differ between the 1.0 and the 3.0 version! More
+        about this in the <link linkend="chapter-container-format">container format description</link>.</para>
 
       <para role="halfbreak"/>
       <para>There are some notable missing features in the current container handling. These are not impossible to implement, the need for them just
         hasn't arisen yet.</para>
       <itemizedlist>
-        <listitem>
-          <para>You currently cannot control the serialization of the XML documents inside the container. The only thing you can do now is set
-            indenting on or off on a <emphasis>global</emphasis> level.</para>
-        </listitem>
         <listitem>
           <para>When writing a zip file you cannot control the compression (different ones, on or off). This means that this mechanism currently can't
             produce e-books (which require an uncompressed first file). </para>
@@ -135,87 +134,180 @@
   <chapter xml:id="chapter-container-format">
     <title>Container format</title>
 
-    <para role="keep-with-next">The root of an XML container document is an <tag>xtlcon:document-container</tag> element. The prefix
-        <code>xtlcon:</code> must be bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
-        (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
+    <para><emphasis role="bold">WARNING:</emphasis> The container formats and processing features differ between the XProc 1.0 and the 3.0
+      version!</para>
+    <itemizedlist>
+      <listitem>
+        <para><link linkend="container-format-xproc-1">Description of the container format for XProc 1.0</link></para>
+      </listitem>
+      <listitem>
+        <para><link linkend="container-format-xproc-3">Description of the container format for XProc 3.0</link></para>
+      </listitem>
+    </itemizedlist>
 
-    <xdoc:transform href="$xdoc/xml-description.xpl">
-      <xi:include href="xml-descriptions/description-document-container.xml"/>
-    </xdoc:transform>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <sect1 xml:id="container-format-xproc-1">
+      <title>XProc 1.0 container format</title>
 
-    <sect1 xml:id="sect-internal-documents">
-      <title>Internal documents</title>
+      <para>The schema for the XProc 1.0 container format can be found in <code>xsd/container.xsd</code>.</para>
 
-      <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is inside the container document. This will
-        in most cases be XML documents, but text is also possible. It must be surrounded by an <tag>xtlcon:document</tag> element:</para>
-
-
-      <xdoc:transform href="$xdoc/xml-description.xpl">
-        <xi:include href="xml-descriptions/description-document.xml"/>
-      </xdoc:transform>
-
-    </sect1>
-
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-    <sect1 xml:id="sect-external-documents">
-      <title>External documents</title>
-
-      <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
-        files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
+      <para role="keep-with-next">The root of an XProc&#160;1.0 XML container document is an <tag>xtlcon:document-container</tag> element. The prefix
+          <code>xtlcon:</code> must be bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
+          (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
 
       <xdoc:transform href="$xdoc/xml-description.xpl">
-        <xi:include href="xml-descriptions/description-external-document.xml"/>
+        <xi:include href="xml-descriptions/description-document-container.xml"/>
       </xdoc:transform>
 
-    </sect1>
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <sect2 xml:id="sect-internal-documents">
+        <title>Internal documents</title>
 
-    <sect1 xml:id="sect-container-document-mime-type-values">
-      <title>Document MIME type values</title>
+        <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is inside the container document. This will
+          in most cases be XML documents, but text is also possible. It must be surrounded by an <tag>xtlcon:document</tag> element:</para>
 
-      <para>The <code>xtlcon:document/@mime-type</code> attribute (see <link linkend="sect-internal-documents">Internal documents</link>) can trigger
-        some special treatment of the contents of the element:</para>
 
-      <variablelist>
-        <varlistentry>
-          <term><code>mime-type="application/pdf"</code>
-            <emphasis>and</emphasis> the root element is <tag>fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"</tag></term>
-          <listitem>
-            <para>The document is assumed to be an XSL-FO document and the FOP XSL-FO processor is called to create a PDF document. The pipelines
-              (both <code><link linkend="container.mod.xpl-xtlcon_container-to-disk">xtlcon:container-to-disk</link></code> and <code><link
-                  linkend="container.mod.xpl-xtlcon_container-to-zip">xtlcon:container-to-zip</link></code>) allow you to specify an FOP configuration
-              file.</para>
-          </listitem>
-        </varlistentry>
-        <varlistentry>
-          <term><code>mime-type="text/plain"</code></term>
-          <listitem>
-            <para>The contents of the <tag>xtlcon:document</tag> element will be stringified and stored as text. The schema requires some root element
-              to be present as child of <tag>xtlcon:document</tag> but this is ignored:</para>
-            <programlisting><![CDATA[<xtlcon:documnent mime-type="text/plain" …>
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/description-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-external-documents">
+        <title>External documents</title>
+
+        <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
+          files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/description-external-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-container-document-mime-type-values">
+        <title>Document MIME type values</title>
+
+        <para>The <code>xtlcon:document/@mime-type</code> attribute (see <link linkend="sect-internal-documents">Internal documents</link>) can
+          trigger some special treatment of the contents of the element:</para>
+
+        <variablelist>
+          <varlistentry>
+            <term><code>mime-type="application/pdf"</code>
+              <emphasis>and</emphasis> the root element is <tag>fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"</tag></term>
+            <listitem>
+              <para>The document is assumed to be an XSL-FO document and the FOP XSL-FO processor is called to create a PDF document. The pipelines
+                (both <code><link linkend="container.mod.xpl-xtlcon_container-to-disk">xtlcon:container-to-disk</link></code> and <code><link
+                    linkend="container.mod.xpl-xtlcon_container-to-zip">xtlcon:container-to-zip</link></code>) allow you to specify an FOP
+                configuration file.</para>
+            </listitem>
+          </varlistentry>
+          <varlistentry>
+            <term><code>mime-type="text/plain"</code></term>
+            <listitem>
+              <para>The contents of the <tag>xtlcon:document</tag> element will be stringified and stored as text. The schema requires some root
+                element to be present as child of <tag>xtlcon:document</tag> but this is ignored:</para>
+              <programlisting><![CDATA[<xtlcon:documnent mime-type="text/plain" …>
 <dummy-root>Text to be stored
 another line…</dummy-root>
 </xtlcon:document>]]></programlisting>
-          </listitem>
-        </varlistentry>
-      </variablelist>
+            </listitem>
+          </varlistentry>
+        </variablelist>
+      </sect2>
+
     </sect1>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <sect1 xml:id="container-format-xproc-3">
+      <title>XProc 3.0 container format</title>
+
+      <para>The container format for XProc&#160;3.0 allows documents in XML, HTML, text and JSON format. It can also process JSON as XML.</para>
+
+      <para>The schema for the XProc 3.0 container format can be found in <code>xsd/container-xpl3.xsd</code>.</para>
+
+      <para role="keep-with-next">The root of an XProc&#160;3.0 XML container document is an <tag>xtlcon:document-container</tag> element. The prefix
+          <code>xtlcon:</code> must be bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
+          (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
+
+      <note>
+        <para>When you get the container back after processing by one of the pipelines, you'll find most href related attributes (attributes that
+          start with <code>href-</code>) copied to an attribute with the same name plus an underscore in front. The values of these added attributes
+          will be the fully expanded and canonicalized references.</para>
+        <para>For instance: When the container has an attribute <code>href-target-zip="../out.zip"</code>, after processing you'll find an attribute
+          like <code>_href-target-zip="file:///ful/path/to/out.zip"</code> on the result.</para>
+      </note>
+
+      <para role="break"/>
+
+      <xdoc:transform href="$xdoc/xml-description.xpl">
+        <xi:include href="xml-descriptions/xproc3-description-document-container.xml"/>
+      </xdoc:transform>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-xproc3-internal-documents">
+        <title>Internal documents</title>
+
+        <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is <emphasis>inside</emphasis> the
+          container document. It must be surrounded by an <tag>xtlcon:document</tag> element.</para>
+
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/xproc3-description-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-xproc3-external-documents">
+        <title>External documents</title>
+
+        <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
+          files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/xproc3-description-external-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+    </sect1>
+
 
   </chapter>
 
   <!-- ================================================================== -->
 
-  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc Libraries">
-    <title>XProc Libraries</title>
+  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc 1.0 Libraries">
+    <title>XProc 1.0 Libraries</title>
 
     <para>The {$component-name} component contains the following XProc (1.0) library module:</para>
 
     <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xplmod/" filter="\.mod\.xpl$" header-level="1" filecomponents="3"
       sublevels="true"/>
+
+  </chapter>
+
+  <!-- ======================================================================= -->
+
+  <chapter xml:id="chapter-xproc-3-libraries" xreflabel="XProc 3.0 Support">
+    <title>XProc 3.0 Support</title>
+
+    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc 3.0:</para>
+
+    <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xpl3mod/" filter=".+\.xpl$" header-level="1" filecomponents="3"
+      sublevels="true" id-suffix="xproc3-"/>
 
   </chapter>
 

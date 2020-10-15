@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
+  name="xtlcon:document" id="xproc3-internal-document-element">
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <attribute name="href-source">
+    <description>
+      <para>href of the source for this document. Will be filled by <code><link linkend="xproc3-directory-to-container.xpl"
+            >xtlcon:directory-to-container</link></code> and the <code><link linkend="xproc3-zip-to-container.xpl"
+          >xtlcon:zip-to-container</link></code> pipelines.</para>
+      <para>When this document comes from disk, it holds the the relative filename against the value of the container's
+          <code>/*/@href-source-path</code>.</para>
+      <para>When this document comes from a zip file, it holds the (relative) href of the file <emphasis>in</emphasis> the zip.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-target">
+    <description>
+      <para>href of the target location for this document. Used by the <code><link linkend="xproc3-container-to-disk.xpl"
+            >xtlcon:container-to-disk</link></code> and <code><link linkend="xproc3-container-to-zip.xpl">xtlcon:container-to-zip</link></code>
+        pipelines.</para>
+      <para>When writing to disk, a relative filename is made absolute against the container's <code>/*/@href-target-path</code>.</para>
+      <para>When writing to a zip, it <emphasis>must</emphasis> be a relative filename. This will become the path of the file <emphasis>in</emphasis>
+        the zip file.</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="href-source-zip">
+    <description>
+      <para>If present, overrides the value of the container's <code>/*/@href-source-zip</code></para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="content-type">
+    <description>
+      <para>Content (MIME) type of the document. Will be filled by <code><link linkend="xproc3-directory-to-container.xpl"
+            >xtlcon:directory-to-container</link></code> and the <code><link linkend="xproc3-zip-to-container.xpl"
+          >xtlcon:zip-to-container</link></code> pipelines.</para>
+      <para>If not present when writing a container, <code>text/xml</code> is assumed for internal documents</para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="serialization">
+    <description>
+      <para>Serialization settings for this document, expressed as a JSON map. To allow the usual double quoted attribute values (<code>"…"</code>), all single quotes
+        will be converted to double quotes before JSON parsing is done. </para>
+      <para>For instance: <code>serialization="{'indent': true}"</code></para>
+    </description>
+    <type name="xs:string"/>
+  </attribute>
+
+  <attribute name="(any)">
+    <description>
+      <para>Any other attributes are allowed, so additional processing information can be added.</para>
+    </description>
+  </attribute>
+
+  <!-- ================================================================== -->
+
+  <element name="(any)" occurs="1">
+    <description>
+      <para>Document contents (For text and JSON does not need to be XML).</para>
+    </description>
+  </element>
+
+</element-description>
