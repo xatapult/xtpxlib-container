@@ -669,6 +669,5 @@
         <folder path="../../xtpxlib-webdoc/"/>
         <folder path="../../xtpxlib-xdoc/"/>
         <folder path="../../../../../../xdata2/"/>
-        <file name="../../../../../../xdata2/xproc3-output.xml"/>
     </projectTree>
 </project>

@@ -11,6 +11,9 @@
   <!-- ================================================================== -->
 
   <releases>
+    <release version="1.1" date="2020-10-15">
+      Added first versions of the 3.0 container pipelines.
+    </release>
     <release version="1.0.B" date="2020-04-09">
       Bugfix for copying binary files referenced from a container.
     </release>
