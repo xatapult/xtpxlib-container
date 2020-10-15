@@ -1,0 +1,55 @@
+<xtlcon:document-container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/container ../../../xsd/container-xpl3.xsd" xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"
+  timestamp="2020-05-04T09:40:25+02:00" href-source-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/xpl3mod/container-to-disk/test/"
+  href-target-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/tmp/container-1-out" href-source-zip="contents/test-contents.zip">
+  
+  <!-- Same as *-1, but with a global zip file set. -->
+  
+  <xtlcon:document href-target="x.xml" serialization="{'indent': true}">
+    <![CDATA[<a><b>Yeah</b></a>]]>
+  </xtlcon:document>
+
+  <xtlcon:document href-target="x.json" content-type="application/json">{"a": true}</xtlcon:document>
+
+  <xtlcon:document href-target="x.html" content-type="text/html">
+    <html>
+      <head>
+        <title>test</title>
+      </head>
+      <body>
+        <h1>test</h1>
+      </body>
+    </html>
+  </xtlcon:document>
+
+  <xtlcon:document href-target="x.xhtml" content-type="application/xhtml+xml">
+    <html>
+      <head>
+        <title>test</title>
+      </head>
+      <body>
+        <h1>test</h1>
+      </body>
+    </html>
+  </xtlcon:document>
+  
+  <xtlcon:document href-target="jsonfromxml.json" content-type="application/json+xml">
+    <map xmlns="http://www.w3.org/2005/xpath-functions">
+      <string key="key">val from json+xml</string>
+    </map>
+  </xtlcon:document>
+
+  <xtlcon:document href-target="x.txt" content-type="text/plain">Bla bla bla</xtlcon:document>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- External documents from disk: -->
+
+  <xtlcon:external-document href-source="contents/x-xatapult.jpg" href-target="fromdisk/x.jpg" not-in-zip="true"/>
+
+  <xtlcon:external-document href-source="contents/xmlplaintest.xml" href-target="fromdisk/xplain.xml" not-in-zip="true"/>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+  <xtlcon:external-document href-source="test-contents/testfile.txt" href-target="fromzip/text.txt" href-source-zip="contents/test-contents.zip"/>
+
+</xtlcon:document-container>

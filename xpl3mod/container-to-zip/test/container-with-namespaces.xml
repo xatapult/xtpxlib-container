@@ -1,0 +1,3561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtlcon:document-container href-source-zip="file:/C:/xdata2/xproc3-tests/test-container/test.docx" timestamp="2020-08-14T16:19:51.45+02:00"
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" href-target-zip="tmp/target-zip-namespaces.zip">
+  <xtlcon:document href-target="test-ns.xml" href-source="word/document.xml" content-type="application/xml">
+    <w:document mc:Ignorable="w14 w15 w16se w16cid w16 w16cex wp14" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink"
+      xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex"
+      xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
+      xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:w10="urn:schemas-microsoft-com:office:word"
+      xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+      xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
+      xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex"
+      xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml"
+      xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex"
+      xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex"
+      xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex"
+      xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex"
+      xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex"
+      xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex"
+      xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex"
+      xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+      xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
+      xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
+      xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+      xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
+      xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid">
+      <w:body>
+        <w:p w14:paraId="0104D7FE" w14:textId="65342679" w:rsidR="00FC78FD" w:rsidRPr="00E542AD" w:rsidRDefault="00FC78FD" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Huisstijl"/>
+            <w:ind w:left="-1134"/>
+            <w:rPr>
+              <w:sz w:val="20"/>
+              <w:szCs w:val="20"/>
+            </w:rPr>
+          </w:pPr>
+        </w:p>
+        <w:p w14:paraId="31DED7EF" w14:textId="77777777" w:rsidR="00FC78FD" w:rsidRDefault="00FC78FD" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Huisstijl"/>
+            <w:ind w:left="-1134"/>
+            <w:sectPr w:rsidR="00FC78FD">
+              <w:headerReference w:type="even" r:id="rId8"/>
+              <w:headerReference w:type="default" r:id="rId9"/>
+              <w:footerReference w:type="even" r:id="rId10"/>
+              <w:footerReference w:type="default" r:id="rId11"/>
+              <w:headerReference w:type="first" r:id="rId12"/>
+              <w:footerReference w:type="first" r:id="rId13"/>
+              <w:pgSz w:w="11906" w:h="16838"/>
+              <w:pgMar w:top="567" w:right="1134" w:bottom="567" w:left="2835" w:header="709" w:footer="709" w:gutter="0"/>
+              <w:cols w:space="720"/>
+              <w:docGrid w:linePitch="360"/>
+            </w:sectPr>
+          </w:pPr>
+        </w:p>
+        <w:p w14:paraId="4D0EA931" w14:textId="1CB4EF30" w:rsidR="00AA08E1" w:rsidRPr="00DB03E6" w:rsidRDefault="00774A2E" w:rsidP="00F45745">
+          <w:pPr>
+            <w:ind w:left="-1134"/>
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+          </w:pPr>
+          <w:r>
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+              <w:noProof/>
+            </w:rPr>
+            <w:drawing>
+              <wp:anchor distT="0" distB="0" distL="114300" distR="114300" simplePos="0" relativeHeight="251658240" behindDoc="1" locked="0"
+                layoutInCell="1" allowOverlap="1" wp14:anchorId="3A1D6DD7" wp14:editId="29E3168A">
+                <wp:simplePos x="0" y="0"/>
+                <wp:positionH relativeFrom="margin">
+                  <wp:align>right</wp:align>
+                </wp:positionH>
+                <wp:positionV relativeFrom="paragraph">
+                  <wp:posOffset>17780</wp:posOffset>
+                </wp:positionV>
+                <wp:extent cx="970915" cy="1181100"/>
+                <wp:effectExtent l="0" t="0" r="635" b="0"/>
+                <wp:wrapTight wrapText="bothSides">
+                  <wp:wrapPolygon edited="0">
+                    <wp:start x="0" y="0"/>
+                    <wp:lineTo x="0" y="21252"/>
+                    <wp:lineTo x="21190" y="21252"/>
+                    <wp:lineTo x="21190" y="0"/>
+                    <wp:lineTo x="0" y="0"/>
+                  </wp:wrapPolygon>
+                </wp:wrapTight>
+                <wp:docPr id="24" name="Picture 24"
+                  descr="A person wearing glasses and looking at the camera&#xA;&#xA;Description automatically generated"/>
+                <wp:cNvGraphicFramePr>
+                  <a:graphicFrameLocks noChangeAspect="1" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+                </wp:cNvGraphicFramePr>
+                <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                  <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                    <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                      <pic:nvPicPr>
+                        <pic:cNvPr id="24" name="IMG_4499-Edit-3.jpg"/>
+                        <pic:cNvPicPr/>
+                      </pic:nvPicPr>
+                      <pic:blipFill rotWithShape="1">
+                        <a:blip r:embed="rId14" cstate="print">
+                          <a:extLst>
+                            <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                              <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+                            </a:ext>
+                          </a:extLst>
+                        </a:blip>
+                        <a:srcRect b="16026"/>
+                        <a:stretch/>
+                      </pic:blipFill>
+                      <pic:spPr bwMode="auto">
+                        <a:xfrm>
+                          <a:off x="0" y="0"/>
+                          <a:ext cx="970915" cy="1181100"/>
+                        </a:xfrm>
+                        <a:prstGeom prst="rect">
+                          <a:avLst/>
+                        </a:prstGeom>
+                        <a:ln>
+                          <a:noFill/>
+                        </a:ln>
+                        <a:extLst>
+                          <a:ext uri="{53640926-AAD7-44D8-BBD7-CCE9431645EC}">
+                            <a14:shadowObscured xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+                          </a:ext>
+                        </a:extLst>
+                      </pic:spPr>
+                    </pic:pic>
+                  </a:graphicData>
+                </a:graphic>
+                <wp14:sizeRelH relativeFrom="page">
+                  <wp14:pctWidth>0</wp14:pctWidth>
+                </wp14:sizeRelH>
+                <wp14:sizeRelV relativeFrom="page">
+                  <wp14:pctHeight>0</wp14:pctHeight>
+                </wp14:sizeRelV>
+              </wp:anchor>
+            </w:drawing>
+          </w:r>
+          <w:r w:rsidR="00293C6D">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve">Content engineering, XML processing and technical documentation are the fields I specialize in. </w:t>
+          </w:r>
+          <w:r w:rsidR="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve">My company </w:t>
+          </w:r>
+          <w:hyperlink r:id="rId15" w:history="1">
+            <w:r w:rsidR="00DB03E6" w:rsidRPr="00843431">
+              <w:rPr>
+                <w:rStyle w:val="Hyperlink"/>
+                <w:rFonts w:cstheme="minorHAnsi"/>
+              </w:rPr>
+              <w:t>Xatapult</w:t>
+            </w:r>
+          </w:hyperlink>
+          <w:r w:rsidR="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> </w:t>
+          </w:r>
+          <w:r w:rsidR="00BA2D4B" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>supports companies that either lack the knowledge or the capacity in th</w:t>
+          </w:r>
+          <w:r w:rsidR="0019772D">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>ese</w:t>
+          </w:r>
+          <w:r w:rsidR="00BA2D4B" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> field</w:t>
+          </w:r>
+          <w:r w:rsidR="0019772D">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>s</w:t>
+          </w:r>
+          <w:r w:rsidR="00BA2D4B" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> of expertise.</w:t>
+          </w:r>
+        </w:p>
+        <w:p w14:paraId="467D9913" w14:textId="07C663D1" w:rsidR="00BA2D4B" w:rsidRDefault="009457DD" w:rsidP="00F45745">
+          <w:pPr>
+            <w:keepLines w:val="0"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve">I </w:t>
+          </w:r>
+          <w:r w:rsidR="0019772D">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>have</w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> a technical IT background. After 20 years </w:t>
+          </w:r>
+          <w:r w:rsidR="00B11A25" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve">working </w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>for sev</w:t>
+          </w:r>
+          <w:r w:rsidR="00B11A25" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:softHyphen/>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>eral large and small companies, in jobs ranging from pro</w:t>
+          </w:r>
+          <w:r w:rsidR="005E327B" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:softHyphen/>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>grammer to arch</w:t>
+          </w:r>
+          <w:r w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>itect, I</w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> started </w:t>
+          </w:r>
+          <w:r w:rsidR="00281589" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>my</w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t xml:space="preserve"> own con</w:t>
+          </w:r>
+          <w:r w:rsidR="005E327B" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:softHyphen/>
+          </w:r>
+          <w:r w:rsidR="000967A0" w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>sult</w:t>
+          </w:r>
+          <w:r w:rsidRPr="00DB03E6">
+            <w:rPr>
+              <w:rFonts w:cstheme="minorHAnsi"/>
+            </w:rPr>
+            <w:t>ing company</w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> in 2001. </w:t>
+          </w:r>
+          <w:r w:rsidR="00B94166">
+            <w:t>Starting</w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> 2009, I</w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0">
+            <w:t xml:space="preserve"> </w:t>
+          </w:r>
+          <w:r w:rsidR="00B94166">
+            <w:t>specialized in</w:t>
+          </w:r>
+          <w:r w:rsidR="008E25E9">
+            <w:t xml:space="preserve"> </w:t>
+          </w:r>
+          <w:r w:rsidR="00B11A25">
+            <w:t>con</w:t>
+          </w:r>
+          <w:r w:rsidR="00B11A25">
+            <w:softHyphen/>
+            <w:t>tent engineering and XML</w:t>
+          </w:r>
+          <w:r w:rsidR="000967A0">
+            <w:t>.</w:t>
+          </w:r>
+        </w:p>
+        <w:p w14:paraId="683B2BEE" w14:textId="450DE705" w:rsidR="0019772D" w:rsidRDefault="0019772D" w:rsidP="00F45745">
+          <w:pPr>
+            <w:keepLines w:val="0"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>I am</w:t>
+          </w:r>
+          <w:r w:rsidR="008E25E9">
+            <w:t xml:space="preserve"> </w:t>
+          </w:r>
+          <w:r w:rsidR="009B7E75">
+            <w:t xml:space="preserve">deliberately </w:t>
+          </w:r>
+          <w:r w:rsidR="008E25E9">
+            <w:t xml:space="preserve">looking for projects on all levels: </w:t>
+          </w:r>
+          <w:r w:rsidR="00CC0716" w:rsidRPr="00CC0716">
+            <w:t>from consulting to application development</w:t>
+          </w:r>
+          <w:r w:rsidR="008E25E9">
+            <w:t xml:space="preserve">. </w:t>
+          </w:r>
+          <w:r w:rsidRPr="0019772D">
+            <w:t>Actual experience is important in giving advice.</w:t>
+          </w:r>
+        </w:p>
+        <w:p w14:paraId="41649404" w14:textId="1BFA974B" w:rsidR="00843431" w:rsidRDefault="00CC0716" w:rsidP="00F45745">
+          <w:pPr>
+            <w:keepLines w:val="0"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t xml:space="preserve">My ability to explain things, either by providing training or </w:t>
+          </w:r>
+          <w:r w:rsidR="00843431">
+            <w:t>writing technical documentation, is</w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve"> an important non-technical skill.</w:t>
+          </w:r>
+          <w:r w:rsidR="00843431">
+            <w:t xml:space="preserve"> I am the author of two XML technology related books.</w:t>
+          </w:r>
+        </w:p>
+        <w:p w14:paraId="778ACEB7" w14:textId="49F03EEF" w:rsidR="00774A2E" w:rsidRDefault="00774A2E" w:rsidP="00F45745">
+          <w:pPr>
+            <w:keepLines w:val="0"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r w:rsidRPr="00774A2E">
+            <w:t xml:space="preserve">For more </w:t>
+          </w:r>
+          <w:r>
+            <w:t xml:space="preserve">detailed </w:t>
+          </w:r>
+          <w:r w:rsidRPr="00774A2E">
+            <w:t xml:space="preserve">information see my </w:t>
+          </w:r>
+          <w:hyperlink r:id="rId16" w:history="1">
+            <w:r w:rsidRPr="00774A2E">
+              <w:rPr>
+                <w:rStyle w:val="Hyperlink"/>
+              </w:rPr>
+              <w:t>LinkedIn profile</w:t>
+            </w:r>
+          </w:hyperlink>
+          <w:r>
+            <w:t>.</w:t>
+          </w:r>
+        </w:p>
+        <w:p w14:paraId="50BD7621" w14:textId="668861F6" w:rsidR="002E7701" w:rsidRDefault="000420BE" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>Expertise O</w:t>
+          </w:r>
+          <w:r w:rsidR="00F81A59">
+            <w:t>verview</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="9214" w:type="dxa"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="2410"/>
+            <w:gridCol w:w="6804"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="00843431" w14:paraId="1EA19F69" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="76DC3860" w14:textId="6E21FD30" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Consulting</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4DC52177" w14:textId="35B9AF43" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00843431">
+                  <w:t xml:space="preserve">Using content is not always straightforward. Which standard(s) to use? What is the optimal granularity for the content? Do I need a CMS to store and retrieve it? How do we combine structured (XML) with non-structured (images, sound, video) data? </w:t>
+                </w:r>
+                <w:r w:rsidR="005D1A53">
+                  <w:t>I help customers in making the right decisions.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00843431" w14:paraId="33502F2F" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="696BE9CB" w14:textId="3D4CB33A" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Content Design</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6BF50F13" w14:textId="23C824A6" w:rsidR="005D1A53" w:rsidRPr="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Sometimes content follows a well-known standard, but often formats need to be tuned or custom designed. </w:t>
+                </w:r>
+                <w:r w:rsidR="005D1A53">
+                  <w:t>I specify, formalize, and document these design decisions.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00843431" w14:paraId="0D6602AB" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="79A1246A" w14:textId="5F51D72B" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Standardization</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="35FEDCB6" w14:textId="205F8E42" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Content standards (also known as vocabularies) play an important role in modern business. I was lead architect in several
+                    standardization projects and am one of the editors of the</w:t>
+                </w:r>
+                <w:r w:rsidR="00774A2E">
+                  <w:t xml:space="preserve"> XProc 3.0 specification</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00843431" w14:paraId="53EAD15D" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="02CD3C2E" w14:textId="35B5DFE1" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Developing applications</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="168A54FB" w14:textId="4CE63341" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Writing actual working code plays an important role in understanding what you are working with and the consequences of design
+                    decisions. I specialize in XML related languages such as XSLT, XQuery and XProc.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00843431" w14:paraId="41975943" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3AB6797E" w14:textId="035D91D7" w:rsidR="00843431" w:rsidRDefault="00843431" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Training</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="055FA707" w14:textId="1F52E7A7" w:rsidR="00843431" w:rsidRDefault="006E6089" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>I provide training on XML related subjects, both in-house and public.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="006E6089" w14:paraId="04629BE4" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2410" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3A661F0E" w14:textId="736D2C8E" w:rsidR="006E6089" w:rsidRDefault="006E6089" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Technical </w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t>D</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>ocumentation</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6804" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7AC2206B" w14:textId="5A96CC6B" w:rsidR="006E6089" w:rsidRDefault="005D1A53" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">I like to write technical documentation and published two books and several articles. Whenever possible </w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>I combine</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> this with my content engineering</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> skills</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve">, for instance </w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve">in using standards, </w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve">generating </w:t>
+                </w:r>
+                <w:r w:rsidR="002408AD">
+                  <w:t>parts,</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> and </w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>providing consistent layout.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="72A161CA" w14:textId="77777777" w:rsidR="002E7701" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>Main c</w:t>
+          </w:r>
+          <w:r w:rsidR="002E7701">
+            <w:t>ustomer overview</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="9180" w:type="dxa"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="1985"/>
+            <w:gridCol w:w="1276"/>
+            <w:gridCol w:w="5919"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="00B35535" w14:paraId="031DC68A" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="34317613" w14:textId="77777777" w:rsidR="00B35535" w:rsidRDefault="00B35535" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>John Benjamins Publishing Company</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="688B7BC2" w14:textId="2CB2A1EE" w:rsidR="00B35535" w:rsidRDefault="00B35535" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2017</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> -</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4A17BEE8" w14:textId="7DEA50A9" w:rsidR="00B35535" w:rsidRDefault="00B35535" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>John Benjamins Publishing Company is a scientific publisher specialized in languages and linguistics. They have an XML First
+                    workflow for their journals and other publications</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> based on the eXist</w:t>
+                </w:r>
+                <w:r w:rsidR="000972A3">
+                  <w:noBreakHyphen/>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>db platform</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>.</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="0C03A6AC" w14:textId="3A263309" w:rsidR="00B35535" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">I support them by developing applications, coaching, and training. </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="003F71AC" w14:paraId="19084AC3" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="66AFAE3D" w14:textId="4481AB9C" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Spiraltrain</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7CBC4CCC" w14:textId="440659C6" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">2018 - </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4740CC14" w14:textId="77777777" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Spiraltrain is a company providing technical developer training. </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="5EDB2ADD" w14:textId="4C69DE62" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="003F71AC">
+                  <w:t xml:space="preserve">I provide XML related training for them on </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>topics such as</w:t>
+                </w:r>
+                <w:r w:rsidRPr="003F71AC">
+                  <w:t xml:space="preserve"> XML basics, XSLT and Schemas.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="003F71AC" w14:paraId="0B97995E" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="162D20F9" w14:textId="0F8CE361" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Nictiz</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5C56B949" w14:textId="55E1411E" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2018</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="14E3F66D" w14:textId="77777777" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Nictiz is the Dutch expertise center for e-Health.</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="060F14A4" w14:textId="771C7686" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>I helped them with one of their eXist-db based systems.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="009B6A1D" w14:paraId="5CE95D00" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2FF08859" w14:textId="076B20A7" w:rsidR="009B6A1D" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>eXist Solutions GmbH</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="39AB9DF1" w14:textId="333B4AE3" w:rsidR="009B6A1D" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2018</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3B29DCD0" w14:textId="0E8E11A6" w:rsidR="009B6A1D" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>eXist Solutions GmbH is the company that support companies in using the eXist-db platform.</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="07D6F7B4" w14:textId="4243E8F9" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>I rewrote and restructures parts of the eXist-db online technical documentation for them.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="005D3EA4" w14:paraId="68FB5A95" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="28565C7F" w14:textId="77777777" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Noordhoff Uitgevers,</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="14274F1B" w14:textId="77777777" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Infinitas Learning</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4312768E" w14:textId="44E5D242" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2015</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>-</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> 2018</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="365B04D2" w14:textId="77777777" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Noordhoff Uitgevers is </w:t>
+                </w:r>
+                <w:r w:rsidR="00FF08A9">
+                  <w:t>an important</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> educational publisher in The Netherlands. Together with the educational publishers Liber (Sweden) and Plantyn (Belgium) it is part of the holding company Infinitas Learning.</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="5CD4C0F5" w14:textId="1BC0EA1F" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>I work</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>ed</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> for Infinitas/Noordhoff </w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>as content</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> architect. A custom content model was designed. This model </w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t>was</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> implemented in their publish workflows, authoring systems </w:t>
+                </w:r>
+                <w:r w:rsidR="00FF08A9">
+                  <w:t xml:space="preserve">and delivery platforms. </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="009B6A1D" w14:paraId="0178F424" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="51291B4D" w14:textId="77777777" w:rsidR="009B6A1D" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Malmberg</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="31094CE3" w14:textId="77777777" w:rsidR="009B6A1D" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2013-2015</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3E86D9E5" w14:textId="77300946" w:rsidR="003F71AC" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Malmberg is one of the </w:t>
+                </w:r>
+                <w:r w:rsidR="002408AD">
+                  <w:t>main</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> educational publish</w:t>
+                </w:r>
+                <w:r>
+                  <w:softHyphen/>
+                  <w:t xml:space="preserve">ers in The Netherlands. </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="4CD77A3A" w14:textId="7D53C2F0" w:rsidR="009B6A1D" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">I supported them by developing a content model, based on existing content and </w:t>
+                </w:r>
+                <w:r w:rsidR="002408AD">
+                  <w:t>plans</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="005D3EA4" w14:paraId="17B59504" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0DCEEF55" w14:textId="77777777" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:lastRenderedPageBreak/>
+                  <w:t>ThiemeMeulenhoff</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="56C04441" w14:textId="7D59CB93" w:rsidR="005D3EA4" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2001-</w:t>
+                </w:r>
+                <w:r w:rsidR="009B6A1D">
+                  <w:t xml:space="preserve"> 2018</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="1FBD6B26" w14:textId="09644828" w:rsidR="009B6A1D" w:rsidRDefault="005D3EA4" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>ThiemeMeulenhoff is one of large educational publishers in The Netherlands.</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="29074A2E" w14:textId="12708BA9" w:rsidR="005D3EA4" w:rsidRDefault="009B6A1D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>I worked for ThiemeMeulenhoff in various projects, among which</w:t>
+                </w:r>
+                <w:r w:rsidR="005D3EA4">
+                  <w:t xml:space="preserve"> </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>d</w:t>
+                </w:r>
+                <w:r w:rsidR="005D3EA4">
+                  <w:t xml:space="preserve">eveloping </w:t>
+                </w:r>
+                <w:r w:rsidR="00A42B38">
+                  <w:t xml:space="preserve">a </w:t>
+                </w:r>
+                <w:r w:rsidR="005D3EA4">
+                  <w:t xml:space="preserve">database publishing architecture, system, CMS selection, </w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve">and </w:t>
+                </w:r>
+                <w:r w:rsidR="005D3EA4">
+                  <w:t>application development</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00DD232E" w14:paraId="52DE783C" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="11BAE3F3" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Kennisnet</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="49C7AE3A" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2011-</w:t>
+                </w:r>
+                <w:r w:rsidR="005D3EA4">
+                  <w:t>2013</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0C73D5D1" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Kennisnet is a government funded support organization for the Dutch educational </w:t>
+                </w:r>
+                <w:r w:rsidR="00FF08A9">
+                  <w:t>market. I was</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> lead architect in develop</w:t>
+                </w:r>
+                <w:r w:rsidR="00885F5C">
+                  <w:t>ing</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> </w:t>
+                </w:r>
+                <w:r w:rsidR="00885F5C">
+                  <w:t xml:space="preserve">two </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>XML standards/vocabularies</w:t>
+                </w:r>
+                <w:r w:rsidR="00885F5C">
+                  <w:t>, supported by eXist/XQuery based websites.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00DD232E" w14:paraId="1501939D" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3BB77050" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>AssistiveWare</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="075C70BA" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2012-2013</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="005D43E0" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00B12E95" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">AssistiveWare develops assistive software for </w:t>
+                </w:r>
+                <w:r w:rsidR="00201173">
+                  <w:t xml:space="preserve">disabled </w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve">people. </w:t>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t>Developed a</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>n eXist based</w:t>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t xml:space="preserve"> conversion applica</w:t>
+                </w:r>
+                <w:r w:rsidR="005E327B">
+                  <w:softHyphen/>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t xml:space="preserve">tion that takes Adobe Indesign files (IDML) and turns them into XML suitable for an iPad </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>app.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00DD232E" w14:paraId="04BB3F97" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="78889A17" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Kenteq</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2B8C6B6F" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2012</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="45024FC6" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00B12E95" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Kenteq provides training for technical jobs in metal- and woodworking, ICT, etc. I performed an </w:t>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t>investiga</w:t>
+                </w:r>
+                <w:r w:rsidR="005E327B">
+                  <w:softHyphen/>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t xml:space="preserve">tion </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>on changing</w:t>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t xml:space="preserve"> the current </w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve">course manual production system </w:t>
+                </w:r>
+                <w:r w:rsidRPr="00B12E95">
+                  <w:t>into something more versatile: Not just creating PDF's but also other formats</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>/interfaces.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00940EC8" w14:paraId="1F51791C" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="1E834379" w14:textId="77777777" w:rsidR="00940EC8" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Line Up</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2CC0349A" w14:textId="77777777" w:rsidR="00940EC8" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2011</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="64AEC1E6" w14:textId="77777777" w:rsidR="00940EC8" w:rsidRDefault="00201173" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Line Up is a digital publisher and service provider. My task was to introduce an XML application platform and train/coach the employees in using this. </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00DD232E" w14:paraId="20326000" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="139FF7DF" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Compu’train</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7AF4F189" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2008-2011</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="21E31892" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00201173" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Compu’train is a well-known Dutch professional training organization. I developed and provided the </w:t>
+                </w:r>
+                <w:r w:rsidR="00FF08A9">
+                  <w:t xml:space="preserve">XML and </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>XSLT train</w:t>
+                </w:r>
+                <w:r w:rsidR="005E327B">
+                  <w:softHyphen/>
+                </w:r>
+                <w:r>
+                  <w:t>ing.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00DD232E" w14:paraId="14089E68" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="47999400" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00DD232E" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>SVH</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1276" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="69CFA016" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00940EC8" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2008-2011</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5919" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5D3D4EE5" w14:textId="77777777" w:rsidR="00DD232E" w:rsidRDefault="00201173" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>SVH is an education provider for the Dutch catering industry. I worked as a system’s architect for several of their
+                    applications.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="08BB7A53" w14:textId="45762653" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>Books</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="9214" w:type="dxa"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="1985"/>
+            <w:gridCol w:w="7229"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="003F71AC" w14:paraId="74B1A501" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="780B5442" w14:textId="77777777" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:rPr>
+                    <w:noProof/>
+                  </w:rPr>
+                  <w:drawing>
+                    <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="7B5A1BD4" wp14:editId="4CCA9DFA">
+                      <wp:extent cx="952500" cy="1176589"/>
+                      <wp:effectExtent l="0" t="0" r="0" b="5080"/>
+                      <wp:docPr id="5" name="Picture 5"/>
+                      <wp:cNvGraphicFramePr>
+                        <a:graphicFrameLocks noChangeAspect="1" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+                      </wp:cNvGraphicFramePr>
+                      <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                        <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                          <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                            <pic:nvPicPr>
+                              <pic:cNvPr id="0" name="Picture 1"/>
+                              <pic:cNvPicPr>
+                                <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                              </pic:cNvPicPr>
+                            </pic:nvPicPr>
+                            <pic:blipFill>
+                              <a:blip r:embed="rId17">
+                                <a:extLst>
+                                  <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                                    <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+                                  </a:ext>
+                                </a:extLst>
+                              </a:blip>
+                              <a:srcRect/>
+                              <a:stretch>
+                                <a:fillRect/>
+                              </a:stretch>
+                            </pic:blipFill>
+                            <pic:spPr bwMode="auto">
+                              <a:xfrm>
+                                <a:off x="0" y="0"/>
+                                <a:ext cx="970884" cy="1199298"/>
+                              </a:xfrm>
+                              <a:prstGeom prst="rect">
+                                <a:avLst/>
+                              </a:prstGeom>
+                              <a:noFill/>
+                              <a:ln>
+                                <a:noFill/>
+                              </a:ln>
+                            </pic:spPr>
+                          </pic:pic>
+                        </a:graphicData>
+                      </a:graphic>
+                    </wp:inline>
+                  </w:drawing>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="6F339702" w14:textId="1AE25609" w:rsidR="00F45745" w:rsidRDefault="00F45745" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="7229" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="57375CDF" w14:textId="77777777" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="003F71AC">
+                  <w:t xml:space="preserve">XProc 3.0 is a programming language for processing XML, JSON, and other documents in pipelines. XProc chains conversions and other steps, allowing for potentially complex processing. </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="5729152E" w14:textId="77777777" w:rsidR="003F71AC" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">I am </w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t>a member</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> of the editing committee for XProc 3.0</w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t xml:space="preserve">.  </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="2935169F" w14:textId="4981A3BC" w:rsidR="00F45745" w:rsidRDefault="00F45745" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">This programmer reference was written to lower the learning curve and stimulate using the language. </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00F45745" w:rsidRPr="00F45745" w14:paraId="5AA645B2" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="1985" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0F55A7FC" w14:textId="3D7BC902" w:rsidR="00F45745" w:rsidRDefault="00F45745" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:rPr>
+                    <w:noProof/>
+                  </w:rPr>
+                  <w:drawing>
+                    <wp:inline distT="0" distB="0" distL="0" distR="0" wp14:anchorId="75A833B1" wp14:editId="4A55024F">
+                      <wp:extent cx="952500" cy="1248707"/>
+                      <wp:effectExtent l="0" t="0" r="0" b="8890"/>
+                      <wp:docPr id="7" name="Picture 7"/>
+                      <wp:cNvGraphicFramePr>
+                        <a:graphicFrameLocks noChangeAspect="1" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+                      </wp:cNvGraphicFramePr>
+                      <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                        <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                          <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                            <pic:nvPicPr>
+                              <pic:cNvPr id="0" name="Picture 5"/>
+                              <pic:cNvPicPr>
+                                <a:picLocks noChangeAspect="1" noChangeArrowheads="1"/>
+                              </pic:cNvPicPr>
+                            </pic:nvPicPr>
+                            <pic:blipFill>
+                              <a:blip r:embed="rId18">
+                                <a:extLst>
+                                  <a:ext uri="{28A0092B-C50C-407E-A947-70E740481C1C}">
+                                    <a14:useLocalDpi val="0" xmlns:a14="http://schemas.microsoft.com/office/drawing/2010/main"/>
+                                  </a:ext>
+                                </a:extLst>
+                              </a:blip>
+                              <a:srcRect/>
+                              <a:stretch>
+                                <a:fillRect/>
+                              </a:stretch>
+                            </pic:blipFill>
+                            <pic:spPr bwMode="auto">
+                              <a:xfrm>
+                                <a:off x="0" y="0"/>
+                                <a:ext cx="963867" cy="1263610"/>
+                              </a:xfrm>
+                              <a:prstGeom prst="rect">
+                                <a:avLst/>
+                              </a:prstGeom>
+                              <a:noFill/>
+                              <a:ln>
+                                <a:noFill/>
+                              </a:ln>
+                            </pic:spPr>
+                          </pic:pic>
+                        </a:graphicData>
+                      </a:graphic>
+                    </wp:inline>
+                  </w:drawing>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="7229" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="641A2910" w14:textId="7D4E7129" w:rsidR="00F45745" w:rsidRPr="003F71AC" w:rsidRDefault="00F45745" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">eXist-db is an XML database and processing platform. </w:t>
+                </w:r>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t xml:space="preserve">Together with Adam Retter I wrote a book </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>about it</w:t>
+                </w:r>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="29B1AEE2" w14:textId="71B35B1E" w:rsidR="00901B24" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>Personal data</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="0" w:type="auto"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="3199"/>
+            <w:gridCol w:w="5423"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="00377E9B" w14:paraId="7279A6DF" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="208EE94C" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Surname:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2598D03E" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Siegel</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="5A7AC4A9" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4003BCBC" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>First names</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6A6C5EB9" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Robert Erik</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="0F3CC844" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="32D75EFD" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Highest education:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0B63D05A" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Master’s degree Electronics</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="70F5325B" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="29DB9BB1" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Date and place of birth</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="68F0979C" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>September 10, 1961, Amsterdam</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="58857D18" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0999C27A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Nationality:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6AC667B5" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Dutch</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w:rsidRPr="00F45745" w14:paraId="2DC050DC" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="141CE2C1" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Address:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3333C235" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRPr="00F45745" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Speenkruidstraat 100</w:t>
+                </w:r>
+                <w:r w:rsidRPr="00F45745">
+                  <w:br/>
+                  <w:t>9731 GX Groningen</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="63AE38A7" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRPr="00F45745" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>The Netherlands</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="421BB80A" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="45EADADE" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Phone</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5DDB5368" w14:textId="05127651" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>+31 6 53260792</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="06641F25" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3C7029C1" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>E-mail:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="35FEADF3" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>erik@</w:t>
+                </w:r>
+                <w:r w:rsidR="007A487D">
+                  <w:t>xatapult.com</w:t>
+                </w:r>
+                <w:r w:rsidR="006A4476">
+                  <w:t xml:space="preserve"> / erik@xatapult.nl</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="6DA7B2A9" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4A0B7614" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Website:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="34BDBA7A" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>www.xatapult.com</w:t>
+                </w:r>
+                <w:r w:rsidR="006A4476">
+                  <w:t xml:space="preserve"> / www.xatapult.nl</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="270E4417" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="557DDD27" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Driver’s license</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="589A0067" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Yes</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="1270051D" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6956E392" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Languages:</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="4565413D" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="58849BE6" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Dutch:</w:t>
+                </w:r>
+                <w:r>
+                  <w:tab/>
+                </w:r>
+                <w:r>
+                  <w:tab/>
+                  <w:t>Excellent</w:t>
+                </w:r>
+                <w:r w:rsidR="007A487D">
+                  <w:t xml:space="preserve"> (native language)</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="725D9F1E" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">English: </w:t>
+                </w:r>
+                <w:r>
+                  <w:tab/>
+                  <w:t>Good</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="0CAE3691" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">German: </w:t>
+                </w:r>
+                <w:r>
+                  <w:tab/>
+                  <w:t>Moderate</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="5DFB7D60" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6E80D1FE" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Company name:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5F0500C5" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Xatapult</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="3894A9BD" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="1405B6BA" w14:textId="2C038488" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">VAT </w:t>
+                </w:r>
+                <w:r w:rsidR="003F71AC">
+                  <w:t>Id</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3A3FB1CC" w14:textId="11AA8898" w:rsidR="00377E9B" w:rsidRDefault="003F71AC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="003F71AC">
+                  <w:t>NL001654294B54</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="00377E9B" w14:paraId="5858172F" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="3199" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3A408E34" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Dutch Chamber of Commerce code:</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5423" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="599C32DC" w14:textId="77777777" w:rsidR="00377E9B" w:rsidRDefault="00377E9B" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">02072375 </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="467E4A2E" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:lastRenderedPageBreak/>
+            <w:t>Employer’s summary</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="0" w:type="auto"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="2388"/>
+            <w:gridCol w:w="6234"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="007A487D" w14:paraId="42483719" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="75F093F6" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                  <w:keepNext/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2009 -</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2969289F" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                  <w:keepNext/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Self-employed </w:t>
+                </w:r>
+                <w:r w:rsidR="00FF08A9">
+                  <w:t xml:space="preserve">content engineer and </w:t>
+                </w:r>
+                <w:r>
+                  <w:t>XML specialist; company name Xatapult</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="335ADBAA" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6776A407" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                  <w:keepNext/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2001-2009</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4D7F9A9A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                  <w:keepNext/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Self-employed ICT consultant and systems architect; company name Siegel ICT</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="7F0E675F" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3FA9DACE" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2000-2001</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="723BE6B3" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>&lt;theFactor.e&gt;; Manager of software implementation department</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="71C73423" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="66A09B93" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1998-2000</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3A7D3E2E" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>EverMind Informatica; Consultant</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="0690FDD3" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="02282339" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1989-1998</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="58DBE299" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>KPN Telecom; various positions</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="238DBBFE" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="036643E6" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1989</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="05478388" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Logica; Analyst-Programmer</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="3E97829C" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0F71D2F9" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1987-1988</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="1CB749D0" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>PTT Telematica laboratorium; Researcher</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="0327D287" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="557A708A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1985</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="553C3E1D" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Informatieteam; Programmer</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="6428433E" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2388" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="29C43F6A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1982-1984</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6234" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="68C18C17" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Freelance programmer embedded systems</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="77A88925" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r>
+            <w:t>Education overview</w:t>
+          </w:r>
+          <w:r>
+            <w:tab/>
+          </w:r>
+          <w:r>
+            <w:tab/>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="0" w:type="auto"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="2322"/>
+            <w:gridCol w:w="6300"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="008343BC" w14:paraId="0CCB104E" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="17A258AA" w14:textId="77777777" w:rsidR="008343BC" w:rsidRDefault="008343BC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2011</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4A302DED" w14:textId="77777777" w:rsidR="006A4476" w:rsidRPr="00F45745" w:rsidRDefault="006A4476" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>eXist Solutions</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="355EB178" w14:textId="77777777" w:rsidR="008343BC" w:rsidRPr="008343BC" w:rsidRDefault="008343BC" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="008343BC">
+                  <w:t>eXist-db Development and Performance training</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="765A7D2B" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="653D2D4A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2008</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="76FF6F7C" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t xml:space="preserve">Cocoon </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="4064CEB3" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Be Value</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="2A6D5BAE" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0880DA27" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2007</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="523DC3A3" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>PAT Learning Solutions</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="26872A45" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>PRINCE2 Foundation</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="5725A9B7" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4062E80B" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2004</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="2D6CD2ED" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Portalyx</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="42E49B46" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Content@ Fundamentals &amp; API programming</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="7FFD8300" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5AECB0CA" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2004</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="45471105" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Cronos</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="5264CC46" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Documentum Technical fundamentals</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="0AB0D886" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3B979495" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>2001</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="412BDC17" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Boertien en Partners</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="4AA72E87" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Train the trainer</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="2FE3FC84" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3D6F3A3D" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1999</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6F19FA6B" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Sys Transition</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="52A8C6EB" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Workshop skills</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="18481A81" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="585B10F2" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1998</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="38A5E836" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>ISES</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="4FCA205B" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>C</w:t>
+                </w:r>
+                <w:r w:rsidRPr="007E383A">
+                  <w:t>onsultant</w:t>
+                </w:r>
+                <w:r>
+                  <w:t>ancy skills</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="427984AA" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="212D795E" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1997</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6895CEF5" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>PTT Professionalisering</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="5631759A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Workshop Facilitator Skills</w:t>
+                </w:r>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t xml:space="preserve"> </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="6620478A" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4AE340EE" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1996-1997</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0B3EB5C4" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Transfer Solutions</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="7FCFE8BB" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Oracle Designer/Developer 2000</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="5A0C35D1" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7F6571D7" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1995</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="71CD36D8" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Staffware Workflow</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="68BDF27B" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Staffware Workflow</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="54027C55" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="21798AAA" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1993</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="4EC95946" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>PTT Opleidingen</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="1D72B124" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Training Management skills</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="54E7F9AC" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7E68A2F0" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1992</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0F3FDE22" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>INTEL Opleiding</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="20396517" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>C++ Object Oriented Programming</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="0051982E" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="62621EEA" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1989</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6948D245" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Logica Opleidingen</w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="29B7840C" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Presentation skills, Working in teams</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="2F0EE78B" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2322" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="5547CBB1" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>1979-1987</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="6300" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3E5E1ADF" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="000E6B2D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:t>Technical University</w:t>
+                </w:r>
+                <w:r w:rsidR="007A487D" w:rsidRPr="00F45745">
+                  <w:t xml:space="preserve"> Twente </w:t>
+                </w:r>
+              </w:p>
+              <w:p w14:paraId="3B39AF82" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Master’s degree Electronics</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="69D586C0" w14:textId="77777777" w:rsidR="007A487D" w:rsidRPr="003E74E0" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+          <w:pPr>
+            <w:pStyle w:val="Heading1"/>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+          <w:r w:rsidRPr="003E74E0">
+            <w:t>Technology overview</w:t>
+          </w:r>
+        </w:p>
+        <w:tbl>
+          <w:tblPr>
+            <w:tblW w:w="0" w:type="auto"/>
+            <w:tblInd w:w="-1134" w:type="dxa"/>
+            <w:tblLayout w:type="fixed"/>
+            <w:tblLook w:val="0000" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="0" w:noVBand="0"/>
+          </w:tblPr>
+          <w:tblGrid>
+            <w:gridCol w:w="2835"/>
+            <w:gridCol w:w="5789"/>
+          </w:tblGrid>
+          <w:tr w:rsidR="007A487D" w14:paraId="201940E7" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="3F9F69FD" w14:textId="37839008" w:rsidR="007A487D" w:rsidRPr="00F45745" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                  <w:rPr>
+                    <w:lang w:val="nl-NL"/>
+                  </w:rPr>
+                </w:pPr>
+                <w:r w:rsidRPr="00F45745">
+                  <w:rPr>
+                    <w:lang w:val="nl-NL"/>
+                  </w:rPr>
+                  <w:t>XML, XSLT, XQuery</w:t>
+                </w:r>
+                <w:r w:rsidR="00E437BA" w:rsidRPr="00F45745">
+                  <w:rPr>
+                    <w:lang w:val="nl-NL"/>
+                  </w:rPr>
+                  <w:t>, XProc</w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745" w:rsidRPr="00F45745">
+                  <w:rPr>
+                    <w:lang w:val="nl-NL"/>
+                  </w:rPr>
+                  <w:t>, XML Schema, Schematron</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="72577465" w14:textId="4C7A8FFC" w:rsidR="006E5991" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Extensive experience with designing, </w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t>documenting,</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> and </w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t>implementing XML based applications and systems.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="38A65557" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="03DB9B4A" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>eXist</w:t>
+                </w:r>
+                <w:r w:rsidR="00B35535">
+                  <w:t>-db</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="473ADFBE" w14:textId="0DE92048" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Extensive experience with building systems with/on top of the eXist</w:t>
+                </w:r>
+                <w:r w:rsidR="00B35535">
+                  <w:t>-db</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> XML database. </w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="6E925F7F" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="6024B1DC" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Cocoon</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7AC83B28" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Extensive knowledge of using and building applications for the open source XML processing framework Cocoon. Implementation of
+                    several applications with Cocoon.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="225E0383" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="00666F9F" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>IMS, SCORM</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="74D4CA33" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Interpreting and using these standards in the Educa</w:t>
+                </w:r>
+                <w:r w:rsidR="005E327B">
+                  <w:softHyphen/>
+                </w:r>
+                <w:r>
+                  <w:t>tional Publishing business. Especially QTI.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="6E64678A" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0BB9798E" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>SOAP, WSDL</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="65790291" w14:textId="3BE9FF5A" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t xml:space="preserve">Designing, </w:t>
+                </w:r>
+                <w:r w:rsidR="00F45745">
+                  <w:t>building,</w:t>
+                </w:r>
+                <w:r>
+                  <w:t xml:space="preserve"> and testing Webservices using these standards.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="0FD687E8" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="1CE5046F" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>HTML, PHP</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="18E7CE00" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Implementation of various websites using these technol</w:t>
+                </w:r>
+                <w:r w:rsidR="005E327B">
+                  <w:softHyphen/>
+                </w:r>
+                <w:r>
+                  <w:t>ogies</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="1327E8EC" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="30D8F68D" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Visual Basic 6; VBA</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="0E7755EC" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Several programming assignments</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="7CBA4D95" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="7D1F6352" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>C</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="38324CD5" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Written lots of C programs (mostly Windows DLL’s).</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+          <w:tr w:rsidR="007A487D" w14:paraId="42D2CC92" w14:textId="77777777" w:rsidTr="00F45745">
+            <w:trPr>
+              <w:cantSplit/>
+            </w:trPr>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="2835" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="123F54E7" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Various assemblers</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+            <w:tc>
+              <w:tcPr>
+                <w:tcW w:w="5789" w:type="dxa"/>
+              </w:tcPr>
+              <w:p w14:paraId="22A8DA7E" w14:textId="77777777" w:rsidR="007A487D" w:rsidRDefault="007A487D" w:rsidP="00F45745">
+                <w:pPr>
+                  <w:pStyle w:val="StandaardAlt"/>
+                </w:pPr>
+                <w:r>
+                  <w:t>Written lots of programs in various assemblers, working as a freelance programmer during my student days.</w:t>
+                </w:r>
+              </w:p>
+            </w:tc>
+          </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="2BFECABE" w14:textId="77777777" w:rsidR="007845D0" w:rsidRDefault="007845D0" w:rsidP="00F45745">
+          <w:pPr>
+            <w:ind w:left="-1134"/>
+          </w:pPr>
+        </w:p>
+        <w:sectPr w:rsidR="007845D0">
+          <w:headerReference w:type="even" r:id="rId19"/>
+          <w:headerReference w:type="default" r:id="rId20"/>
+          <w:footerReference w:type="even" r:id="rId21"/>
+          <w:footerReference w:type="default" r:id="rId22"/>
+          <w:headerReference w:type="first" r:id="rId23"/>
+          <w:footerReference w:type="first" r:id="rId24"/>
+          <w:type w:val="continuous"/>
+          <w:pgSz w:w="11906" w:h="16838"/>
+          <w:pgMar w:top="567" w:right="1134" w:bottom="567" w:left="2835" w:header="709" w:footer="709" w:gutter="0"/>
+          <w:cols w:space="720"/>
+          <w:docGrid w:linePitch="360"/>
+        </w:sectPr>
+      </w:body>
+    </w:document>
+  </xtlcon:document>
+</xtlcon:document-container>

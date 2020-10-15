@@ -10,13 +10,13 @@ Binary files are referenced instead of included.
 The container structure is standardized. Once contents is in a container it's easy to analyze, change and/or write back. 
 It can also be used to create a whole file structure, in a container, and then write it out to disk or zip file.
 
-The `xtpxlib-container` component has XProc (1.0) pipelines for:
+The `xtpxlib-container` component has XProc (1.0 and 3.0) pipelines for:
 * Reading the contents of a zip file or directory structure into a container
 * Writing a container out to a zip file or disk
 
 ## Technical information
 
-Component version: V1.0.B - 2020-04-09
+Component version: V1.1 - 2020-10-15
 
 Documentation: [`https://container.xtpxlib.org`](https://container.xtpxlib.org)
 
@@ -29,7 +29,11 @@ This component depends on:
 
 ## Version history
 
-**V1.0.B - 2020-04-09 (current)**
+**V1.1 - 2020-10-15 (current)**
+
+Added first versions of the 3.0 container pipelines.
+
+**V1.0.B - 2020-04-09**
 
 Bugfix for copying binary files referenced from a container.
 
