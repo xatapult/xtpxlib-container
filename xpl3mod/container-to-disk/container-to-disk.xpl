@@ -13,14 +13,26 @@
   <p:import href="../../xpl3mod-local/load-for-container.xpl"/>
   <p:import href="../../xpl3mod-local/report-error.xpl"/>
 
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!-- Development setting: -->
+
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- Ports: -->
 
   <p:input port="source" primary="true" sequence="false">
     <p:document use-when="$develop" href="test/container-example-1.xml"/>
     <p:documentation>The container to process.</p:documentation>
   </p:input>
+  
+  <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}" pipe="container@load-from-container">
+    <p:documentation>The input container structure with additional shadow attributes filled.</p:documentation>
+  </p:output>
 
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- Options: -->
+  
   <p:option name="href-target-path" as="xs:string?" required="false" select="()">
     <p:documentation>Base path where to write the container. When you specify this it will have precedence 
       over a /*/@href-target-path.</p:documentation>
@@ -29,11 +41,7 @@
   <p:option name="remove-target" as="xs:boolean" required="false" select="true()">
     <p:documentation>Whether to attempt to remove the target directory before writing.</p:documentation>
   </p:option>
-
-  <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}" pipe="container@load-from-container">
-    <p:documentation>The input container structure with additional shadow attributes filled.</p:documentation>
-  </p:output>
-
+ 
   <!-- ================================================================== -->
 
   <p:declare-step type="local:delete-directory" name="local-delete-directory">
@@ -68,11 +76,11 @@
   <xtlcon:load-from-container do-container-paths-for-zip="false" main-pipeline-static-base-uri="{static-base-uri()}"
     href-target-path="{$href-target-path}" name="load-from-container"/>
 
-  <local:delete-directory remove-target="{$remove-target}" >
+  <local:delete-directory remove-target="{$remove-target}">
     <p:with-input port="container" pipe="container@load-from-container"/>
   </local:delete-directory>
 
-  <p:for-each >
+  <p:for-each>
     <p:variable name="href-target" as="xs:string" select="p:document-property(., 'href-target')"/>
     <p:try>
       <p:store href="{$href-target}"/>

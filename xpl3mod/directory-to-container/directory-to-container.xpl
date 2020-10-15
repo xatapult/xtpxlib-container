@@ -14,14 +14,21 @@
   <p:import href="../../../xtpxlib-common/xpl3mod/recursive-directory-list/recursive-directory-list.xpl"/>
   <p:import href="../../xpl3mod-local/load-for-container.xpl"/>
 
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <!-- Development setting: -->
-  <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
-  <p:option name="develop-load-html" as="xs:boolean" static="true" select="true()"/>
-  <p:option name="develop-load-text" as="xs:boolean" static="true" select="true()"/>
-  <p:option name="develop-load-json" as="xs:boolean" static="true" select="true()"/>
-  <p:option name="develop-load-json-as-xml" as="xs:boolean" static="true" select="true()"/>
 
-  <!-- TBD remove default and make required -->
+  <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- Ports: -->
+
+  <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}">
+    <p:documentation>The resulting container structure.</p:documentation>
+  </p:output>
+
+  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <!-- Options: -->
+
   <p:option use-when="not($develop)" name="href-source-directory" as="xs:string" required="true">
     <p:documentation>URI of the directory to read.</p:documentation>
   </p:option>
@@ -39,23 +46,27 @@
     <p:documentation>The sub-directory depth to go. When lt `0`, all sub-directories are processed.</p:documentation>
   </p:option>
 
-  <p:option name="load-html" as="xs:boolean" required="false" select="if ($develop) then $develop-load-html else false()">
+  <p:option use-when="not($develop)" name="load-html" as="xs:boolean" required="false" select="false()">
     <p:documentation>Whether to load HTML files.</p:documentation>
   </p:option>
+  <p:option use-when="$develop" name="load-html" as="xs:boolean" required="false" select="true()"/>
 
-  <p:option name="load-text" as="xs:boolean" required="false" select="if ($develop) then $develop-load-text else false()">
+  <p:option use-when="not($develop)" name="load-text" as="xs:boolean" required="false" select="false()">
     <p:documentation>Whether to load text files.</p:documentation>
   </p:option>
+  <p:option use-when="$develop" name="load-text" as="xs:boolean" required="false" select="true()"/>
 
-  <p:option name="load-json" as="xs:boolean" required="false" select="if ($develop) then $develop-load-json else false()">
+  <p:option use-when="not($develop)" name="load-json" as="xs:boolean" required="false" select="false()">
     <p:documentation>Whether to load JSON files.</p:documentation>
   </p:option>
+  <p:option use-when="$develop" name="load-json" as="xs:boolean" required="false" select="true()"/>
 
-  <p:option name="json-as-xml" as="xs:boolean" required="false" select="if ($develop) then $develop-load-json-as-xml else false()">
+  <p:option use-when="not($develop)" name="json-as-xml" as="xs:boolean" required="false" select="false()">
     <p:documentation>When JSON files are loaded (`option $load-json` is `true`): whether to add them to the container as XML or as JSON text.
       It will set the entry's content type to `application/json+xml`.
     </p:documentation>
   </p:option>
+  <p:option use-when="$develop" name="json-as-xml" as="xs:boolean" required="false" select="true()"/>
 
   <p:option name="add-document-target-paths" as="xs:boolean" required="false" select="false()">
     <p:documentation>Copies the relative source path as the target path `@target-path` for the individual documents.
@@ -76,10 +87,6 @@
   <p:option name="override-content-types" as="array(array(xs:string))?" required="false" select="()">
     <p:documentation>Override content types specification (see description of `p:directory-list`).</p:documentation>
   </p:option>
-
-  <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}">
-    <p:documentation>The resulting container structure.</p:documentation>
-  </p:output>
 
   <!-- ================================================================== -->
 
