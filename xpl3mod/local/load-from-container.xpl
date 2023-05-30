@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
-  xmlns:array="http://www.w3.org/2005/xpath-functions/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
-  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0" type="xtlcon:load-from-container"
-  name="load-from-container">
+<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
+  xmlns:map="http://www.w3.org/2005/xpath-functions/map" xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0"
+  type="xtlcon:load-from-container" name="load-from-container">
 
   <p:documentation>
     Step that loads the files, as specified by a container, that need to be written to disk:
@@ -16,8 +17,8 @@
       - serialization: The serialization options for this document (including, most importantly, method and media-type)
     - External documents are always loaded as application/octet-stream.
     
-    Provides an additional output port "container" that outputs the original contain er supplemented with all the appropriate
-    shadow (starting with _) attributes.
+    Provides an additional output port "container" that outputs the original container, supplemented with all the appropriate
+    shadow attributes (starting with _).
   </p:documentation>
 
   <!-- ================================================================== -->
@@ -25,9 +26,23 @@
 
   <p:import href="report-error.xpl"/>
 
+  <!-- ======================================================================= -->
+  <!-- PORTS: -->
+
   <p:input port="source" primary="true" sequence="false" content-types="xml">
     <p:documentation>The container to load</p:documentation>
   </p:input>
+
+  <p:output port="result" primary="true" sequence="true" content-types="any">
+    <p:documentation>The resulting documents with some additional document properties (see pipeline description).</p:documentation>
+  </p:output>
+
+  <p:output port="container" primary="false" sequence="false" content-types="xml" pipe="@amended-container">
+    <p:documentation>The original container, supplemented with additional shadow attributes for the paths and filenames.</p:documentation>
+  </p:output>
+
+  <!-- ======================================================================= -->
+  <!-- OPTIONS: -->
 
   <p:option name="do-container-paths-for-zip" as="xs:boolean" required="true">
     <p:documentation>Set to true for container-to-zip, false otherwise.</p:documentation>
@@ -48,18 +63,9 @@
     <p:documentation>The `static-base-uri()` of the calling pipeline.</p:documentation>
   </p:option>
 
-  <p:output port="result" primary="true" sequence="true" content-types="any">
-    <p:documentation>The resulting documents with some additional document properties (see pipeline description).</p:documentation>
-  </p:output>
-
-  <p:output port="container" primary="false" sequence="false" content-types="xml" pipe="@amended-container">
-    <p:documentation>The original container, supplemented with additional shadow attributes for the paths and filenames.</p:documentation>
-  </p:output>
-
   <!-- ================================================================== -->
 
-  <p:xslt name="amended-container"
-    parameters="map{ 
+  <p:xslt name="amended-container" parameters="map{ 
         'do-container-paths-for-zip': $do-container-paths-for-zip,
         'href-target-zip': $href-target-zip, 
         'href-target-path': $href-target-path, 
@@ -71,7 +77,8 @@
 
   <!-- Get the documents: -->
   <p:for-each>
-    <p:with-input select="(xtlcon:document-container/(xtlcon:document | xtlcon:external-document[exists(@_href-source)]))[exists(@_href-target)]"/>
+    <p:with-input
+      select="(xtlcon:document-container/(xtlcon:document | xtlcon:external-document[exists(@_href-source)]))[exists(@_href-target)]"/>
     <p:variable name="index" as="xs:integer" select="p:iteration-position()"/>
 
     <p:variable name="href-target-original" as="xs:string?" select="xs:string(/*/@href-target)"/>
@@ -82,7 +89,8 @@
       <!-- Load embedded documents: -->
       <p:when test="exists(/xtlcon:document)">
         <p:variable name="content-type" as="xs:string" select="string((/*/@content-type, 'text/xml')[1])"/>
-        <p:variable name="serialization-attribute-value" as="xs:string" select="translate(string(/*/@serialization), '''', '&quot;')"/>
+        <p:variable name="serialization-attribute-value" as="xs:string"
+          select="translate(string(/*/@serialization), '''', '&quot;')"/>
         <p:variable name="serialization" as="map(xs:string, item()*)?"
           select="if (normalize-space($serialization-attribute-value) eq '') then () else parse-json($serialization-attribute-value)"/>
 
@@ -94,17 +102,16 @@
         <p:variable name="is-text" select="not($is-xml) and not($is-html) and starts-with($content-type, 'text/')"/>
         <p:variable name="is-json" as="xs:boolean" select="$content-type eq 'application/json'"/>
         <p:variable name="is-jsonxml" as="xs:boolean" select="$content-type eq 'application/json+xml'"/>
-        <p:variable name="method" as="xs:string"
-          select="
+        <p:variable name="method" as="xs:string" select="
             if ($is-html) then 'html'
             else if ($is-xhtml) then 'xhtml'
             else if ($is-text) then 'text'
             else if ($is-json or $is-jsonxml) then 'json'
             else 'xml'
           "/>
-        <p:variable name="effective-content-type" as="xs:string" select="if ($is-jsonxml) then 'application/json' else $content-type"/>
-        <p:variable name="base-serialization-map" as="map(xs:string, item()*)"
-          select="map{ 
+        <p:variable name="effective-content-type" as="xs:string"
+          select="if ($is-jsonxml) then 'application/json' else $content-type"/>
+        <p:variable name="base-serialization-map" as="map(xs:string, item()*)" select="map{ 
             'method': $method, 
             'media-type': $effective-content-type,
             'omit-xml-declaration': if ($is-xml) then false() else true()
@@ -123,14 +130,12 @@
         </p:try>
         <!-- Set the document properties for the now stand-alone document: -->
         <p:set-properties>
-          <p:with-option name="properties"
-            select="map{
+          <p:with-option name="properties" select="map{
               'base-uri': 'base-uri:///' || $index,
               'href-target': $href-target,
               'href-target-original': $href-target-original,
               'serialization': map:merge(($serialization, $base-serialization-map))            
-            }"
-          />
+            }"/>
         </p:set-properties>
       </p:when>
 
@@ -154,23 +159,24 @@
           </p:when>
           <!-- File from zip: -->
           <p:otherwise>
-            <p:variable name="href-source-regexp-escaped-anchored" select="'^' || replace($href-source, '([.\\?*+|\^${}()])', '\\$1') || '$'"/>
+            <p:variable name="href-source-regexp-escaped-anchored"
+              select="'^' || replace($href-source, '([.\\?*+|\^${}()\[\]])', '\\$1') || '$'"/>
             <p:unarchive format="zip">
               <p:with-input port="source" href="{$href-source-zip}"/>
               <p:with-option name="include-filter" select="$href-source-regexp-escaped-anchored"/>
-              <p:with-option name="override-content-types" select="[ [$href-source-regexp-escaped-anchored, 'application/octet-stream'] ]"/>
+              <p:with-option name="override-content-types"
+                select="[ [$href-source-regexp-escaped-anchored, 'application/octet-stream'] ]"/>
             </p:unarchive>
           </p:otherwise>
         </p:choose>
+
         <!-- Set the document properties for the external document: -->
         <p:set-properties>
-          <p:with-option name="properties"
-            select="map{
+          <p:with-option name="properties" select="map{
               'base-uri': p:document-property(., 'base-uri') || '-' || $index,
               'href-target': $href-target,
               'href-target-original': $href-target-original
-            }"
-          />
+            }"/>
         </p:set-properties>
       </p:otherwise>
 

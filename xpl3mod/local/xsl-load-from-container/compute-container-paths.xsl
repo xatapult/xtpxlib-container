@@ -14,8 +14,8 @@
 
   <xsl:mode on-no-match="shallow-copy"/>
 
-  <xsl:include href="../../../xtpxlib-common/xslmod/general.mod.xsl"/>
-  <xsl:include href="../../../xtpxlib-common/xslmod/href.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/general.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/href.mod.xsl"/>
 
   <!-- ================================================================== -->
   <!-- PARAMETERS: -->
@@ -200,7 +200,7 @@
     <xsl:copy-of select="$path-attribute"/>
     <!-- If we have a value for this, output the canonical equivalent attribute: -->
     <xsl:if test="$enabled and ($path-attribute-name ne '')">
-      <xsl:variable name="canonical-attribute-value" as="xs:string" select="($value, $default)[1]"/>
+      <xsl:variable name="canonical-attribute-value" as="xs:string?" select="($value, $default)[1]"/>
       <xsl:if test="exists($canonical-attribute-value)">
         <xsl:attribute name="_{$path-attribute-name}" select="$canonical-attribute-value"/>
       </xsl:if>

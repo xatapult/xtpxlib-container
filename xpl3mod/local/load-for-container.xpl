@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
-  xmlns:array="http://www.w3.org/2005/xpath-functions/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
-  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0" exclude-inline-prefixes="#all"
-  type="xtlcon:load-for-container">
+<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
+  xmlns:map="http://www.w3.org/2005/xpath-functions/map" xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0"
+  exclude-inline-prefixes="#all" type="xtlcon:load-for-container">
 
   <p:documentation>
-    Step that loads a single file from a zip or file and performs all the container loading handling.
+    Local support step that loads a single file from a zip or file, and performs all the necessary container loading handling. 
+    The result will be a single container entry.
   </p:documentation>
 
   <!-- ================================================================== -->
-  <!-- SETUP: -->
+  <!-- OPTONS: -->
 
   <p:option name="href-zip" as="xs:string?" required="false" select="()">
     <p:documentation>Name of the zip file to use. If (), load from the file system.</p:documentation>
@@ -50,11 +52,15 @@
     <p:documentation>If true, copies the relative source path as the target path `@target-path` for the individual documents.</p:documentation>
   </p:option>
 
+  <!-- ======================================================================= -->
+  <!-- PORTS: -->
+
   <p:output port="result" primary="true" sequence="false">
     <p:documentation>The resulting container entry</p:documentation>
   </p:output>
 
   <!-- ================================================================== -->
+  <!-- MAIN: -->
 
   <!-- Find out what to do: -->
   <p:variable name="is-html" as="xs:boolean" select="$content-type = ('text/html', 'application/xhtml+xml')"/>
@@ -79,7 +85,8 @@
             <p:unarchive format="zip">
               <p:with-input port="source" href="{$href-zip}"/>
               <p:with-option name="include-filter" select="$href-source-rel-regexp-escaped-anchored"/>
-              <p:with-option name="override-content-types" select="[ [$href-source-rel-regexp-escaped-anchored, $content-type] ]"/>
+              <p:with-option name="override-content-types"
+                select="[ [$href-source-rel-regexp-escaped-anchored, $content-type] ]"/>
             </p:unarchive>
           </p:when>
           <p:otherwise>
