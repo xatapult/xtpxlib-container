@@ -147,8 +147,27 @@
           </xsl:call-template>
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source"/>
-            <xsl:with-param name="value" select="if ($from-zip) then @href-source else 
-              if (empty($global-source-path)) then () else local:get-canonical-path($global-source-path, @href-source)"/>
+            <xsl:with-param name="value" >
+              <xsl:variable name="href-source" as="xs:string?" select="xs:string(@href-source)"/>
+              <xsl:choose>
+                <xsl:when test="normalize-space($href-source) eq ''">
+                  <xsl:sequence select="()"/>
+                </xsl:when>
+                <xsl:when test="$from-zip">
+                  <xsl:sequence select="$href-source"/>
+                </xsl:when>
+                <xsl:when test="xtlc:href-is-absolute($href-source)">
+                  <xsl:sequence select="$href-source"/>
+                </xsl:when>
+                <xsl:when test="exists($global-source-path)">
+                  <xsl:sequence select="local:get-canonical-path($global-source-path, $href-source)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <!-- We have a relative @href-source and no global source path. Just try... -->
+                  <xsl:sequence select="$href-source"/>
+                </xsl:otherwise>  
+              </xsl:choose>
+            </xsl:with-param>
           </xsl:call-template>
         </xsl:if>
 
