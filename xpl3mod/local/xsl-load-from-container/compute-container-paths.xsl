@@ -54,7 +54,7 @@
   <xsl:variable name="global-target-path" as="xs:string?">
     <xsl:if test="not($do-container-paths-for-zip)">
       <xsl:variable name="href-target-path-normalized" as="xs:string?"
-        select="if (normalize-space($href-target-path) eq '') then () else $href-target-path"/>
+        select="if (normalize-space($href-target-path) eq '') then () else normalize-space($href-target-path)"/>
       <xsl:variable name="target-path" as="xs:string?"
         select="local:global-canonical-path(($href-target-path-normalized, $root/@href-target-path)[1])"/>
       <xsl:if test="empty($target-path)">
@@ -136,6 +136,7 @@
           Compute the canonical shadow attributes: -->
         <xsl:variable name="from-zip" as="xs:boolean"
           select="if (xtlc:str2bln(@not-in-zip, false())) then false() else (exists(@href-source-zip) or exists($global-source-zip))"/>
+        
         <xsl:if test="$is-external-document">
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source-zip"/>
@@ -146,7 +147,8 @@
           </xsl:call-template>
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source"/>
-            <xsl:with-param name="value" select="if ($from-zip) then @href-source else local:get-canonical-path($global-source-path, @href-source)"/>
+            <xsl:with-param name="value" select="if ($from-zip) then @href-source else 
+              if (empty($global-source-path)) then () else local:get-canonical-path($global-source-path, @href-source)"/>
           </xsl:call-template>
         </xsl:if>
 
@@ -180,7 +182,7 @@
 
       <!-- Copy contents also: -->
       <xsl:apply-templates/>
-      
+
     </xsl:copy>
 
   </xsl:template>
@@ -212,7 +214,6 @@
   <xsl:function name="local:get-canonical-path" as="xs:string?">
     <xsl:param name="base-path" as="xs:string"/>
     <xsl:param name="path" as="xs:string?"/>
-
     <xsl:choose>
       <xsl:when test="normalize-space($path) ne ''">
         <xsl:sequence select="xtlc:href-concat(($base-path, $path)) => local:canonicalize-path()"/>

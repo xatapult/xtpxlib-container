@@ -11,7 +11,7 @@
     - For every document loaded, it adds the following additional properties:
       - href-target: The actual target URI for the document (absolute for writing to disk, relative for writing to zips)s
       - href-target-original: The original value as set by @href-target
-      = base-uri: Something unique (necessary for creating the zip since we need to address the loaded files as unique 
+      - base-uri: Something unique (necessary for creating the zip since we need to address the loaded files as unique 
         by their base-uris). Not reflects anything in the real world!
     - For documents stated *in* the container, it sets the property:
       - serialization: The serialization options for this document (including, most importantly, method and media-type)
@@ -74,7 +74,7 @@
       }">
     <p:with-input port="stylesheet" href="xsl-load-from-container/compute-container-paths.xsl"/>
   </p:xslt>
-
+  
   <!-- Get the documents: -->
   <p:for-each>
     <p:with-input
