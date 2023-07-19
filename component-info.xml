@@ -11,6 +11,9 @@
   <!-- ================================================================== -->
 
   <releases>
+    <release version="2.0" date="2023-07-19">
+      Added XProc 3.0 support.
+    </release>
     <release version="1.1" date="2020-10-15">
       Added first versions of the 3.0 container pipelines.
     </release>
