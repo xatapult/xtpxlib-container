@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <element-description xmlns="http://www.xtpxlib.nl/ns/xdoc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd" xmlns:xlink="http://www.w3.org/1999/xlink"
-  name="xtlcon:document-container">
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/xdoc ../../../../xtpxlib-xdoc/xsd/element-description.xsd"
+  xmlns:xlink="http://www.w3.org/1999/xlink" name="xtlcon:document-container">
 
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
@@ -14,57 +14,62 @@
 
   <attribute name="href-source-zip">
     <description>
-      <para>When the container was read from a zip file (using <code><link linkend="container.mod.xpl-xtlcon_zip-to-container"
-            >xtlcon:zip-to-container</link></code>), this attribute holds the href of this zip file.</para>
+      <para>When the container was read from a zip file (using <code><link
+            linkend="container.mod.xpl-xtlcon_zip-to-container">xtlcon:zip-to-container</link></code>), this attribute
+        holds the href of this zip file.</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-target-zip">
     <description>
-      <para>Holds the name of the zip file for writing the container to (using <code><link linkend="container.mod.xpl-xtlcon_container-to-zip"
-            >xtlcon:container-to-zip</link></code>).</para>
+      <para>Holds the name of the zip file for writing the container to (using <code><link
+            linkend="container.mod.xpl-xtlcon_container-to-zip">xtlcon:container-to-zip</link></code>).</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-target-zip-result">
     <description>
-      <para>After the container is written to a zip file using <code><link linkend="container.mod.xpl-xtlcon_container-to-zip"
-            >xtlcon:container-to-zip</link></code>, this attribute will hold the full canonical filename of the zip file.</para>
+      <para>After the container is written to a zip file using <code><link
+            linkend="container.mod.xpl-xtlcon_container-to-zip">xtlcon:container-to-zip</link></code>, this attribute
+        will hold the full canonical filename of the zip file.</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-target-zip-tmpdir">
     <description>
-      <para>After the container is written to a zip file using <code><link linkend="container.mod.xpl-xtlcon_container-to-zip"
-            >xtlcon:container-to-zip</link></code>, this attribute will hold the full canonical name of the temporary directory used for this process
-        (probably not very useful).</para>
+      <para>After the container is written to a zip file using <code><link
+            linkend="container.mod.xpl-xtlcon_container-to-zip">xtlcon:container-to-zip</link></code>, this attribute
+        will hold the full canonical name of the temporary directory used for this process (probably not very
+        useful).</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-source-path">
     <description>
-      <para>When the container was read from a directory (using <code><link linkend="container.mod.xpl-xtlcon_directory-to-container"
-            >xtlcon:directory-to-container</link></code>), this attribute holds the href of this directory.</para>
+      <para>When the container was read from a directory (using <code><link
+            linkend="container.mod.xpl-xtlcon_directory-to-container">xtlcon:directory-to-container</link></code>), this
+        attribute holds the href of this directory.</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-target-path">
     <description>
-      <para>Holds the name of the directory for writing the container to (using <code><link linkend="container.mod.xpl-xtlcon_container-to-disk"
-            >xtlcon:container-to-disk</link></code>).</para>
+      <para>Holds the name of the directory for writing the container to (using <code><link
+            linkend="container.mod.xpl-xtlcon_container-to-disk">xtlcon:container-to-disk</link></code>).</para>
     </description>
     <type name="xs:string"/>
   </attribute>
 
   <attribute name="href-target-result-path">
     <description>
-      <para>After the container is written to a directory file using <code><link linkend="container.mod.xpl-xtlcon_container-to-disk"
-            >xtlcon:container-to-disk</link></code>, this attribute will hold the full canonical name of the directory.</para>
+      <para>After the container is written to a directory file using <code><link
+            linkend="container.mod.xpl-xtlcon_container-to-disk">xtlcon:container-to-disk</link></code>, this attribute
+        will hold the full canonical name of the directory.</para>
     </description>
     <type name="xs:string"/>
   </attribute>
@@ -87,7 +92,8 @@
 
     <element name="xtlcon:external-document">
       <description>
-        <para>An external document, referenced from the container structure. See <xref linkend="sect-external-documents"/>.</para>
+        <para>An external document, referenced from the container structure. See <xref linkend="sect-external-documents"
+          />.</para>
       </description>
     </element>
 

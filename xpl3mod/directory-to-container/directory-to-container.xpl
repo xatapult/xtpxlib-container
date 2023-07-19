@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step" xmlns:map="http://www.w3.org/2005/xpath-functions/map"
-  xmlns:array="http://www.w3.org/2005/xpath-functions/array" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
-  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0" exclude-inline-prefixes="#all"
-  type="xtlcon:directory-to-container">
+<p:declare-step xmlns:p="http://www.w3.org/ns/xproc" xmlns:c="http://www.w3.org/ns/xproc-step"
+  xmlns:map="http://www.w3.org/2005/xpath-functions/map" xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xtlc="http://www.xtpxlib.nl/ns/common"
+  xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" xmlns:local="#local.t2g_zy5_xkb" version="3.0"
+  exclude-inline-prefixes="#all" type="xtlcon:directory-to-container">
 
   <p:documentation>
-    Loads a directory (with optional sub-directories) into an xtpxlib container structure.
+    Loads a directory (with optional sub-directories) into an xtpxlib (3) container structure.
   </p:documentation>
 
   <!-- ================================================================== -->
   <!-- SETUP: -->
 
   <p:import href="../../../xtpxlib-common/xpl3mod/recursive-directory-list/recursive-directory-list.xpl"/>
-  <p:import href="../../xpl3mod-local/load-for-container.xpl"/>
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!-- Development setting: -->
+  <p:import href="../local/load-for-container.xpl"/>
 
   <p:option name="develop" as="xs:boolean" static="true" select="false()"/>
 
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!-- Ports: -->
+  <!-- ======================================================================= -->
+  <!-- PORTS: -->
 
   <p:output port="result" primary="true" sequence="false" serialization="map{'method': 'xml', 'indent': true()}">
     <p:documentation>The resulting container structure.</p:documentation>
   </p:output>
 
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-  <!-- Options: -->
+  <!-- ======================================================================= -->
+  <!-- OPTIONS: -->
 
   <p:option use-when="not($develop)" name="href-source-directory" as="xs:string" required="true">
     <p:documentation>URI of the directory to read.</p:documentation>
   </p:option>
-  <p:option use-when="$develop" name="href-source-directory" as="xs:string" required="false" select="resolve-uri('test/', static-base-uri())"/>
+  <p:option use-when="$develop" name="href-source-directory" as="xs:string" required="false"
+    select="resolve-uri('test/', static-base-uri())"/>
 
   <p:option name="include-filter" as="xs:string*" required="false" select="()">
     <p:documentation>Optional regular expression include filters.</p:documentation>
@@ -89,14 +88,17 @@
   </p:option>
 
   <!-- ================================================================== -->
+  <!-- MAIN: -->
 
-  <xtlc:recursive-directory-list flatten="true" path="{$href-source-directory}" depth="{$depth}" detailed="true" add-decoded="true">
-    <!-- Since include/exclude filters can be sequences of strings, we'll have to pass them by p:with-option (and not as attribute): -->
+  <!-- Get the directory contents: -->
+  <xtlc:recursive-directory-list flatten="true" path="{$href-source-directory}" depth="{$depth}" detailed="true"
+    add-decoded="true">
     <p:with-option name="exclude-filter" select="$exclude-filter"/>
     <p:with-option name="include-filter" select="$include-filter"/>
     <p:with-option name="override-content-types" select="$override-content-types"/>
   </xtlc:recursive-directory-list>
 
+  <!-- Load all contents as container parts: -->
   <p:variable name="base-dir" select="/*/@xml:base"/>
   <p:for-each>
     <p:with-input select="/*/c:file"/>

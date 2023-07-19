@@ -251,8 +251,6 @@ another line…</dummy-root>
         <xi:include href="xml-descriptions/xproc3-description-document-container.xml"/>
       </xdoc:transform>
 
-      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
       <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
       <sect2 xml:id="sect-xproc3-internal-documents">
@@ -284,15 +282,14 @@ another line…</dummy-root>
 
     </sect1>
 
-
   </chapter>
 
   <!-- ================================================================== -->
 
-  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc 1.0 Libraries">
+  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc 1.0 support">
     <title>XProc 1.0 Libraries</title>
 
-    <para>The {$component-name} component contains the following XProc (1.0) library module:</para>
+    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc&#160;1.0:</para>
 
     <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xplmod/" filter="\.mod\.xpl$" header-level="1" filecomponents="3"
       sublevels="true"/>
@@ -301,10 +298,10 @@ another line…</dummy-root>
 
   <!-- ======================================================================= -->
 
-  <chapter xml:id="chapter-xproc-3-libraries" xreflabel="XProc 3.0 Support">
+  <chapter xml:id="chapter-xproc-3-libraries" xreflabel="XProc 3.0 support">
     <title>XProc 3.0 Support</title>
 
-    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc 3.0:</para>
+    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc&#160;3.0:</para>
 
     <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xpl3mod/" filter=".+\.xpl$" header-level="1" filecomponents="3"
       sublevels="true" id-suffix="xproc3-"/>

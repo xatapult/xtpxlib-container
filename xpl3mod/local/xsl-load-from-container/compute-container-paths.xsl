@@ -14,8 +14,8 @@
 
   <xsl:mode on-no-match="shallow-copy"/>
 
-  <xsl:include href="../../../xtpxlib-common/xslmod/general.mod.xsl"/>
-  <xsl:include href="../../../xtpxlib-common/xslmod/href.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/general.mod.xsl"/>
+  <xsl:include href="../../../../xtpxlib-common/xslmod/href.mod.xsl"/>
 
   <!-- ================================================================== -->
   <!-- PARAMETERS: -->
@@ -54,7 +54,7 @@
   <xsl:variable name="global-target-path" as="xs:string?">
     <xsl:if test="not($do-container-paths-for-zip)">
       <xsl:variable name="href-target-path-normalized" as="xs:string?"
-        select="if (normalize-space($href-target-path) eq '') then () else $href-target-path"/>
+        select="if (normalize-space($href-target-path) eq '') then () else normalize-space($href-target-path)"/>
       <xsl:variable name="target-path" as="xs:string?"
         select="local:global-canonical-path(($href-target-path-normalized, $root/@href-target-path)[1])"/>
       <xsl:if test="empty($target-path)">
@@ -136,6 +136,7 @@
           Compute the canonical shadow attributes: -->
         <xsl:variable name="from-zip" as="xs:boolean"
           select="if (xtlc:str2bln(@not-in-zip, false())) then false() else (exists(@href-source-zip) or exists($global-source-zip))"/>
+        
         <xsl:if test="$is-external-document">
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source-zip"/>
@@ -146,7 +147,27 @@
           </xsl:call-template>
           <xsl:call-template name="create-canonical-shadow-attribute">
             <xsl:with-param name="path-attribute" select="@href-source"/>
-            <xsl:with-param name="value" select="if ($from-zip) then @href-source else local:get-canonical-path($global-source-path, @href-source)"/>
+            <xsl:with-param name="value" >
+              <xsl:variable name="href-source" as="xs:string?" select="xs:string(@href-source)"/>
+              <xsl:choose>
+                <xsl:when test="normalize-space($href-source) eq ''">
+                  <xsl:sequence select="()"/>
+                </xsl:when>
+                <xsl:when test="$from-zip">
+                  <xsl:sequence select="$href-source"/>
+                </xsl:when>
+                <xsl:when test="xtlc:href-is-absolute($href-source)">
+                  <xsl:sequence select="$href-source"/>
+                </xsl:when>
+                <xsl:when test="exists($global-source-path)">
+                  <xsl:sequence select="local:get-canonical-path($global-source-path, $href-source)"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <!-- We have a relative @href-source and no global source path. Just try... -->
+                  <xsl:sequence select="$href-source"/>
+                </xsl:otherwise>  
+              </xsl:choose>
+            </xsl:with-param>
           </xsl:call-template>
         </xsl:if>
 
@@ -180,7 +201,7 @@
 
       <!-- Copy contents also: -->
       <xsl:apply-templates/>
-      
+
     </xsl:copy>
 
   </xsl:template>
@@ -200,7 +221,7 @@
     <xsl:copy-of select="$path-attribute"/>
     <!-- If we have a value for this, output the canonical equivalent attribute: -->
     <xsl:if test="$enabled and ($path-attribute-name ne '')">
-      <xsl:variable name="canonical-attribute-value" as="xs:string" select="($value, $default)[1]"/>
+      <xsl:variable name="canonical-attribute-value" as="xs:string?" select="($value, $default)[1]"/>
       <xsl:if test="exists($canonical-attribute-value)">
         <xsl:attribute name="_{$path-attribute-name}" select="$canonical-attribute-value"/>
       </xsl:if>
@@ -212,7 +233,6 @@
   <xsl:function name="local:get-canonical-path" as="xs:string?">
     <xsl:param name="base-path" as="xs:string"/>
     <xsl:param name="path" as="xs:string?"/>
-
     <xsl:choose>
       <xsl:when test="normalize-space($path) ne ''">
         <xsl:sequence select="xtlc:href-concat(($base-path, $path)) => local:canonicalize-path()"/>

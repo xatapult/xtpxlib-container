@@ -4,7 +4,7 @@
   xmlns:xtlcon="http://www.xtpxlib.nl/ns/container" version="3.0" exclude-inline-prefixes="#all" type="xtlcon:report-error">
 
   <p:documentation>
-    Creates a standard error message for errors occuring in the container pipelines.
+    Creates a standard error message for errors occurring in the container pipelines.
   </p:documentation>
 
   <!-- ================================================================== -->
