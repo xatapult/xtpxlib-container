@@ -14,6 +14,14 @@
     <![CDATA[<a><b>Yeah</b></a>]]>
   </xtlcon:document>
 
+  <xtlcon:document href-target="x-from-container.xml">
+    <test>
+      <inner>
+        <more-inner>CONTENTS</more-inner>
+      </inner>
+    </test>
+  </xtlcon:document>
+
   <xtlcon:document href-target="x.json" content-type="application/json">{"a": true}</xtlcon:document>
 
   <xtlcon:document href-target="x.html" content-type="text/html">

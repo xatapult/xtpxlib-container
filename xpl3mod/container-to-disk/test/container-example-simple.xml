@@ -1,0 +1,14 @@
+<xtlcon:document-container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xtpxlib.nl/ns/container ../../../xsd/container-xpl3.xsd" xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"
+  timestamp="2020-05-04T09:40:25+02:00" href-source-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/xpl3mod/container-to-disk/test/"
+  href-target-path="file:/C:/Data/Erik/work/xatapult/xtpxlib-container/tmp/container-simple-out">
+
+  <xtlcon:document href-target="from-container.xml" serialization="{'indent': true}">
+    <test>
+      <inner>
+        <more-inner>CONTENTS</more-inner>
+      </inner>
+    </test>
+  </xtlcon:document>
+ 
+</xtlcon:document-container>
