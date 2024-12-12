@@ -1,4 +1,5 @@
-# `xtpxlib-container`: Xatapult XML Library - Support for XML containers (multiple files wrapped into one)
+<?xml version="1.0" encoding="UTF-8"?>
+<README xml:space="preserve"># `xtpxlib-container`: Xatapult XML Library - Support for XML containers (multiple files wrapped into one)
 
 **Xatapult Content Engineering - [`http://www.xatapult.com`](http://www.xatapult.com)**
 
@@ -55,5 +56,6 @@ Pre-release to test GitHub pages functionality.
 
 
 -----------
-*Generated: 2023-09-06 11:16:30*
+*Generated: 2024-12-12 14:23:29*
 
+</README>
