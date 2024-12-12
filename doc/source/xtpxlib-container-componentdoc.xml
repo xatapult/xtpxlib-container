@@ -138,17 +138,81 @@
       version!</para>
     <itemizedlist>
       <listitem>
-        <para><link linkend="container-format-xproc-1">Description of the container format for XProc 1.0</link></para>
+        <para>
+          <link linkend="container-format-xproc-3">Description of the container format for XProc 3.0</link>
+        </para>
       </listitem>
       <listitem>
-        <para><link linkend="container-format-xproc-3">Description of the container format for XProc 3.0</link></para>
+        <para>
+          <link linkend="container-format-xproc-1">Description of the container format for XProc 1.0</link>
+        </para>
       </listitem>
     </itemizedlist>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
+    <sect1 xml:id="container-format-xproc-3">
+      <title>XProc 3.0 container format</title>
+
+      <para>The container format for XProc&#160;3.0 allows documents in XML, HTML, text and JSON format. It can also process JSON as XML.</para>
+
+      <para>The schema for the XProc 3.0 container format can be found in <code>xsd/container-xpl3.xsd</code>.</para>
+
+      <para role="keep-with-next">The root of an XProc&#160;3.0 XML container document is an <tag>xtlcon:document-container</tag> element. The prefix
+          <code>xtlcon:</code> must be bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
+          (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
+
+      <note>
+        <para>When you get the container back after processing by one of the pipelines, you'll find most href related attributes (attributes that
+          start with <code>href-</code>) copied to an attribute with the same name plus an underscore in front. The values of these added attributes
+          will be the fully expanded and canonicalized references.</para>
+        <para>For instance: When the container has an attribute <code>href-target-zip="../out.zip"</code>, after processing you'll find an attribute
+          like <code>_href-target-zip="file:///ful/path/to/out.zip"</code> on the result.</para>
+      </note>
+
+      <para role="break"/>
+
+      <xdoc:transform href="$xdoc/xml-description.xpl">
+        <xi:include href="xml-descriptions/xproc3-description-document-container.xml"/>
+      </xdoc:transform>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-xproc3-internal-documents">
+        <title>Internal documents</title>
+
+        <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is <emphasis>inside</emphasis> the
+          container document. It must be surrounded by an <tag>xtlcon:document</tag> element.</para>
+
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/xproc3-description-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+      <sect2 xml:id="sect-xproc3-external-documents">
+        <title>External documents</title>
+
+        <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
+          files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
+
+        <xdoc:transform href="$xdoc/xml-description.xpl">
+          <xi:include href="xml-descriptions/xproc3-description-external-document.xml"/>
+        </xdoc:transform>
+
+      </sect2>
+
+    </sect1>
+
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
     <sect1 xml:id="container-format-xproc-1">
       <title>XProc 1.0 container format</title>
+
+      <para><emphasis role="bold">WARNING</emphasis>: XProc&#160;1.0 support is considered deprecated and will be removed in the near future!</para>
 
       <para>The schema for the XProc 1.0 container format can be found in <code>xsd/container.xsd</code>.</para>
 
@@ -209,7 +273,9 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><code>mime-type="text/plain"</code></term>
+            <term>
+              <code>mime-type="text/plain"</code>
+            </term>
             <listitem>
               <para>The contents of the <tag>xtlcon:document</tag> element will be stringified and stored as text. The schema requires some root
                 element to be present as child of <tag>xtlcon:document</tag> but this is ignored:</para>
@@ -224,76 +290,6 @@ another line…</dummy-root>
 
     </sect1>
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-    <sect1 xml:id="container-format-xproc-3">
-      <title>XProc 3.0 container format</title>
-
-      <para>The container format for XProc&#160;3.0 allows documents in XML, HTML, text and JSON format. It can also process JSON as XML.</para>
-
-      <para>The schema for the XProc 3.0 container format can be found in <code>xsd/container-xpl3.xsd</code>.</para>
-
-      <para role="keep-with-next">The root of an XProc&#160;3.0 XML container document is an <tag>xtlcon:document-container</tag> element. The prefix
-          <code>xtlcon:</code> must be bound to the namespace <code>http://www.xtpxlib.nl/ns/container</code>
-          (<code>xmlns:xtlcon="http://www.xtpxlib.nl/ns/container"</code>).</para>
-
-      <note>
-        <para>When you get the container back after processing by one of the pipelines, you'll find most href related attributes (attributes that
-          start with <code>href-</code>) copied to an attribute with the same name plus an underscore in front. The values of these added attributes
-          will be the fully expanded and canonicalized references.</para>
-        <para>For instance: When the container has an attribute <code>href-target-zip="../out.zip"</code>, after processing you'll find an attribute
-          like <code>_href-target-zip="file:///ful/path/to/out.zip"</code> on the result.</para>
-      </note>
-
-      <para role="break"/>
-
-      <xdoc:transform href="$xdoc/xml-description.xpl">
-        <xi:include href="xml-descriptions/xproc3-description-document-container.xml"/>
-      </xdoc:transform>
-
-      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-      <sect2 xml:id="sect-xproc3-internal-documents">
-        <title>Internal documents</title>
-
-        <para role="keep-with-next">An <emphasis>internal</emphasis> document is a document whose contents is <emphasis>inside</emphasis> the
-          container document. It must be surrounded by an <tag>xtlcon:document</tag> element.</para>
-
-
-        <xdoc:transform href="$xdoc/xml-description.xpl">
-          <xi:include href="xml-descriptions/xproc3-description-document.xml"/>
-        </xdoc:transform>
-
-      </sect2>
-
-      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-      <sect2 xml:id="sect-xproc3-external-documents">
-        <title>External documents</title>
-
-        <para role="keep-with-next">An <emphasis>external</emphasis> document is a document that is only referenced from the container. Usually binary
-          files but anything goes. The referencing is done using an <tag>xtlcon:external-document</tag> element:</para>
-
-        <xdoc:transform href="$xdoc/xml-description.xpl">
-          <xi:include href="xml-descriptions/xproc3-description-external-document.xml"/>
-        </xdoc:transform>
-
-      </sect2>
-
-    </sect1>
-
-  </chapter>
-
-  <!-- ================================================================== -->
-
-  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc 1.0 support">
-    <title>XProc 1.0 Libraries</title>
-
-    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc&#160;1.0:</para>
-
-    <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xplmod/" filter="\.mod\.xpl$" header-level="1" filecomponents="3"
-      sublevels="true"/>
-
   </chapter>
 
   <!-- ======================================================================= -->
@@ -305,6 +301,20 @@ another line…</dummy-root>
 
     <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xpl3mod/" filter=".+\.xpl$" header-level="1" filecomponents="3"
       sublevels="true" id-suffix="xproc3-"/>
+
+  </chapter>
+
+  <!-- ================================================================== -->
+
+  <chapter xml:id="chapter-xproc-libraries" xreflabel="XProc 1.0 support">
+    <title>XProc 1.0 Libraries</title>
+
+    <para>The {$component-name} component contains the following support (pipelines and/or libraries) for XProc&#160;1.0:</para>
+
+    <para><emphasis role="bold">WARNING</emphasis>: XProc&#160;1.0 support is considered deprecated and will be removed in the near future!</para>
+
+    <xdoc:transform href="$xdoc/code-docgen-dir.xpl" dir="../../../xtpxlib-container/xplmod/" filter="\.mod\.xpl$" header-level="1" filecomponents="3"
+      sublevels="true"/>
 
   </chapter>
 

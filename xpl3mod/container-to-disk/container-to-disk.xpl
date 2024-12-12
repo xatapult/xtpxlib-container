@@ -22,7 +22,7 @@
   <!-- PORTS -->
 
   <p:input port="source" primary="true" sequence="false">
-    <p:document use-when="$develop" href="test/container-example-1.xml"/>
+    <p:document use-when="$develop" href="test/container-example-simple.xml"/>
     <p:documentation>The container to process.</p:documentation>
   </p:input>
 
